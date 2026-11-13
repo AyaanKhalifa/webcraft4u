@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowUpRight, Mail, Instagram, Clock, Send, AlertCircle, Copy, ExternalLink, Download, ShieldCheck, Check, RotateCcw } from 'lucide-react';
+import { ArrowUpRight, Mail, Instagram, Clock, Send, AlertCircle, Copy, ExternalLink, Download, ShieldCheck, Check, RotateCcw, HelpCircle } from 'lucide-react';
+import { downloadWebCraftApk } from '../utils/downloadApk.js';
 
 export default function Contact({ preselectedService }) {
   const [formData, setFormData] = useState({
@@ -338,15 +339,22 @@ Delivered directly to WebCraft Founders at webcraft.4iu@gmail.com`;
               <a
                 href="/WebCraft.apk"
                 download="WebCraft.apk"
+                onClick={downloadWebCraftApk}
                 className="btn btn-terracotta btn-responsive-full"
+                id="btn-download-apk"
               >
                 <Download size={16} style={{ flexShrink: 0 }} />
                 <span>Download WebCraft.apk (482 KB)</span>
               </a>
 
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.75rem', fontSize: '0.7rem', color: '#7A786E' }}>
-                <ShieldCheck size={14} color="#253B32" style={{ flexShrink: 0 }} />
-                <span>Direct safe download for Android devices via Chrome.</span>
+              <div style={{ marginTop: '0.85rem', padding: '0.65rem 0.85rem', backgroundColor: '#F0E6D2', borderRadius: '4px', border: '1px solid rgba(41,40,33,0.12)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.35rem', fontSize: '0.75rem', fontWeight: 700, color: '#253B32' }}>
+                  <ShieldCheck size={14} color="#253B32" style={{ flexShrink: 0 }} />
+                  <span>Chrome Android Installation Tip:</span>
+                </div>
+                <p style={{ margin: 0, fontSize: '0.72rem', color: '#59574D', lineHeight: 1.45 }}>
+                  If Chrome shows <em>"File might be harmful"</em>, tap <strong>"Download anyway"</strong> → tap <strong>Open</strong> → <strong>Install</strong>.
+                </p>
               </div>
             </div>
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowUpRight, Smartphone } from 'lucide-react';
+import { downloadWebCraftApk } from '../utils/downloadApk.js';
 
 export default function Navbar({ onOpenContact }) {
   const [scrolled, setScrolled] = useState(false);
@@ -71,8 +72,9 @@ export default function Navbar({ onOpenContact }) {
             <a
               href="/WebCraft.apk"
               download="WebCraft.apk"
+              onClick={downloadWebCraftApk}
               className="btn btn-outline nav-desktop-cta"
-              style={{ fontSize: '0.75rem', padding: '0.45rem 0.75rem', gap: '0.35rem' }}
+              style={{ fontSize: '0.75rem', padding: '0.45rem 0.75rem', gap: '0.35rem', cursor: 'pointer' }}
               title="Download WebCraft Android App (.apk) for Chrome"
             >
               <Smartphone size={14} color="#B95E3C" />
@@ -153,6 +155,10 @@ export default function Navbar({ onOpenContact }) {
             <a
               href="/WebCraft.apk"
               download="WebCraft.apk"
+              onClick={(e) => {
+                setMobileMenuOpen(false);
+                downloadWebCraftApk(e);
+              }}
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -165,7 +171,8 @@ export default function Navbar({ onOpenContact }) {
                 textDecoration: 'none',
                 fontWeight: 700,
                 fontSize: '0.85rem',
-                marginBottom: '1rem'
+                marginBottom: '1rem',
+                cursor: 'pointer'
               }}
             >
               <Smartphone size={18} color="#B95E3C" />

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Instagram, Mail, ArrowUpRight } from 'lucide-react';
+import { downloadWebCraftApk } from '../utils/downloadApk.js';
 
 export default function Footer({ onOpenPrivacy, onOpenTerms, onReplayShutter }) {
   const currentYear = new Date().getFullYear();
@@ -190,8 +191,9 @@ export default function Footer({ onOpenPrivacy, onOpenTerms, onReplayShutter }) 
               <a
                 href="/WebCraft.apk"
                 download="WebCraft.apk"
+                onClick={downloadWebCraftApk}
                 className="btn btn-terracotta"
-                style={{ fontSize: '0.75rem', padding: '0.4rem 0.75rem' }}
+                style={{ fontSize: '0.75rem', padding: '0.4rem 0.75rem', cursor: 'pointer' }}
               >
                 Download
               </a>

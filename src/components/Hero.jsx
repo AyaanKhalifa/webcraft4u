@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowUpRight, Compass, ShieldCheck, Zap, Smartphone } from 'lucide-react';
 import ParticleHeroBackground from './ParticleHeroBackground.jsx';
+import { downloadWebCraftApk } from '../utils/downloadApk.js';
 
 export default function Hero({ onStartProject, onExploreWork }) {
   const [typedText, setTypedText] = useState('');
@@ -60,12 +61,14 @@ export default function Hero({ onStartProject, onExploreWork }) {
               <a
                 href="/WebCraft.apk"
                 download="WebCraft.apk"
+                onClick={downloadWebCraftApk}
                 style={{
                   color: 'inherit',
                   textDecoration: 'none',
                   display: 'inline-flex',
                   alignItems: 'center',
-                  gap: '4px'
+                  gap: '4px',
+                  cursor: 'pointer'
                 }}
                 title="Download WebCraft Android App for Chrome"
               >
