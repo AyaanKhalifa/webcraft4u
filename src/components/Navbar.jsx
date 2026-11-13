@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowUpRight, Smartphone } from 'lucide-react';
 import { downloadWebCraftApk } from '../utils/downloadApk.js';
 
-export default function Navbar({ onOpenContact }) {
+export default function Navbar({ onOpenContact, onOpenInstall }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -68,18 +68,17 @@ export default function Navbar({ onOpenContact }) {
 
           {/* Action Button on Desktop & Mobile Toggle */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
-            {/* Direct APK Download for Chrome */}
-            <a
-              href="/WebCraft.apk"
-              download="WebCraft.apk"
-              onClick={downloadWebCraftApk}
+            {/* Direct App & Shortcut Install */}
+            <button
+              type="button"
+              onClick={onOpenInstall}
               className="btn btn-outline nav-desktop-cta"
               style={{ fontSize: '0.75rem', padding: '0.45rem 0.75rem', gap: '0.35rem', cursor: 'pointer' }}
-              title="Download WebCraft Android App (.apk) for Chrome"
+              title="Install WebCraft App Shortcut directly to Home Screen"
             >
               <Smartphone size={14} color="#B95E3C" />
-              <span>Get .APK</span>
-            </a>
+              <span>Install App</span>
+            </button>
 
             <button
               type="button"
@@ -151,13 +150,12 @@ export default function Navbar({ onOpenContact }) {
               ))}
             </nav>
 
-            {/* Mobile Android APK Download link */}
-            <a
-              href="/WebCraft.apk"
-              download="WebCraft.apk"
-              onClick={(e) => {
+            {/* Mobile App & Shortcut Install button */}
+            <button
+              type="button"
+              onClick={() => {
                 setMobileMenuOpen(false);
-                downloadWebCraftApk(e);
+                if (onOpenInstall) onOpenInstall();
               }}
               style={{
                 display: 'flex',
@@ -168,16 +166,17 @@ export default function Navbar({ onOpenContact }) {
                 border: '1.5px solid #292821',
                 borderRadius: '4px',
                 color: '#253B32',
-                textDecoration: 'none',
                 fontWeight: 700,
                 fontSize: '0.85rem',
                 marginBottom: '1rem',
-                cursor: 'pointer'
+                cursor: 'pointer',
+                width: '100%',
+                textAlign: 'left'
               }}
             >
               <Smartphone size={18} color="#B95E3C" />
-              <span>Download Android App (.apk)</span>
-            </a>
+              <span>Install App Shortcut (Instant)</span>
+            </button>
 
             <button
               type="button"

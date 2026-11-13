@@ -2,7 +2,7 @@ import React from 'react';
 import { Instagram, Mail, ArrowUpRight } from 'lucide-react';
 import { downloadWebCraftApk } from '../utils/downloadApk.js';
 
-export default function Footer({ onOpenPrivacy, onOpenTerms, onReplayShutter }) {
+export default function Footer({ onOpenPrivacy, onOpenTerms, onOpenInstall, onReplayShutter }) {
   const currentYear = new Date().getFullYear();
 
   const handleScrollTo = (e, id) => {
@@ -184,19 +184,18 @@ export default function Footer({ onOpenPrivacy, onOpenTerms, onReplayShutter }) 
                   style={{ width: '28px', height: '28px', borderRadius: '4px', border: '1px solid rgba(240,230,210,0.3)' }}
                 />
                 <div>
-                  <strong style={{ fontSize: '0.8rem', color: '#FBF8F2', display: 'block' }}>Android App (.apk)</strong>
-                  <span style={{ fontSize: '0.7rem', color: 'rgba(240,230,210,0.6)' }}>Chrome Direct Download</span>
+                  <strong style={{ fontSize: '0.8rem', color: '#FBF8F2', display: 'block' }}>WebCraft App Shortcut</strong>
+                  <span style={{ fontSize: '0.7rem', color: 'rgba(240,230,210,0.6)' }}>1-Tap Browser Auto-Install</span>
                 </div>
               </div>
-              <a
-                href="/WebCraft.apk"
-                download="WebCraft.apk"
-                onClick={downloadWebCraftApk}
+              <button
+                type="button"
+                onClick={onOpenInstall}
                 className="btn btn-terracotta"
                 style={{ fontSize: '0.75rem', padding: '0.4rem 0.75rem', cursor: 'pointer' }}
               >
-                Download
-              </a>
+                Install
+              </button>
             </div>
           </div>
 

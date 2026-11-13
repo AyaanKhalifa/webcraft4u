@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ArrowUpRight, Mail, Instagram, Clock, Send, AlertCircle, Copy, ExternalLink, Download, ShieldCheck, Check, RotateCcw, HelpCircle } from 'lucide-react';
 import { downloadWebCraftApk } from '../utils/downloadApk.js';
 
-export default function Contact({ preselectedService }) {
+export default function Contact({ preselectedService, onOpenInstall }) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -314,46 +314,57 @@ Delivered directly to WebCraft Founders at webcraft.4iu@gmail.com`;
               </div>
             </div>
 
-            {/* Android APK Download Card (Chrome Browser Ready) */}
+            {/* Android APK & Home Screen App Shortcut Card */}
             <div className="apk-download-card">
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
                 <img
                   src="/favicon/android-chrome-192x192.png"
                   alt="WebCraft Android Favicon"
-                  style={{ width: '40px', height: '40px', borderRadius: '8px', border: '1.5px solid #292821', flexShrink: 0 }}
+                  style={{ width: '42px', height: '42px', borderRadius: '8px', border: '1.5px solid #292821', flexShrink: 0 }}
                 />
                 <div style={{ minWidth: 0, flex: 1 }}>
                   <h4 style={{ margin: 0, fontSize: '1.1rem', color: '#253B32', lineHeight: 1.25 }}>
-                    WebCraft Android App (.apk)
+                    WebCraft App & Shortcut
                   </h4>
                   <span className="apk-card-sub">
-                    Chrome Direct Download • v1.0.0
+                    Direct Browser Install • Zero Download Errors
                   </span>
                 </div>
               </div>
 
               <p style={{ fontSize: '0.825rem', color: '#59574D', lineHeight: 1.5, marginBottom: '1.25rem' }}>
-                Download our official Android APK directly on Chrome. Features the same wolf favicon, instant contact dispatch, and offline blueprints.
+                Install the official WebCraft app shortcut right to your phone's home screen. Opens in fullscreen without browser bars, with instant contact dispatch and wolf logo.
               </p>
+
+              <button
+                type="button"
+                onClick={onOpenInstall}
+                className="btn btn-terracotta btn-responsive-full"
+                style={{ width: '100%', marginBottom: '0.65rem' }}
+              >
+                <Smartphone size={16} style={{ flexShrink: 0 }} />
+                <span>Install App Shortcut (1-Tap)</span>
+              </button>
 
               <a
                 href="/WebCraft.apk"
                 download="WebCraft.apk"
                 onClick={downloadWebCraftApk}
-                className="btn btn-terracotta btn-responsive-full"
+                className="btn btn-outline btn-responsive-full"
+                style={{ width: '100%', fontSize: '0.8rem', padding: '0.55rem' }}
                 id="btn-download-apk"
               >
-                <Download size={16} style={{ flexShrink: 0 }} />
-                <span>Download WebCraft.apk (482 KB)</span>
+                <Download size={14} style={{ flexShrink: 0 }} />
+                <span>Or Download Raw .APK (482 KB)</span>
               </a>
 
               <div style={{ marginTop: '0.85rem', padding: '0.65rem 0.85rem', backgroundColor: '#F0E6D2', borderRadius: '4px', border: '1px solid rgba(41,40,33,0.12)' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.35rem', fontSize: '0.75rem', fontWeight: 700, color: '#253B32' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.25rem', fontSize: '0.75rem', fontWeight: 700, color: '#253B32' }}>
                   <ShieldCheck size={14} color="#253B32" style={{ flexShrink: 0 }} />
-                  <span>Chrome Android Installation Tip:</span>
+                  <span>Browser Auto-Install Tip:</span>
                 </div>
                 <p style={{ margin: 0, fontSize: '0.72rem', color: '#59574D', lineHeight: 1.45 }}>
-                  If Chrome shows <em>"File might be harmful"</em>, tap <strong>"Download anyway"</strong> → tap <strong>Open</strong> → <strong>Install</strong>.
+                  Tap <strong>"Install App Shortcut"</strong> and accept the prompt to add WebCraft directly to your home screen!
                 </p>
               </div>
             </div>

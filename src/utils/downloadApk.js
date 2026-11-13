@@ -43,3 +43,4 @@ export async function downloadWebCraftApk(e) {
     document.body.removeChild(directLink);
   }
 }
+

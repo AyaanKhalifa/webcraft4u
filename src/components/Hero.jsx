@@ -3,7 +3,7 @@ import { ArrowUpRight, Compass, ShieldCheck, Zap, Smartphone } from 'lucide-reac
 import ParticleHeroBackground from './ParticleHeroBackground.jsx';
 import { downloadWebCraftApk } from '../utils/downloadApk.js';
 
-export default function Hero({ onStartProject, onExploreWork }) {
+export default function Hero({ onStartProject, onExploreWork, onOpenInstall }) {
   const [typedText, setTypedText] = useState('');
   const [phraseIdx, setPhraseIdx] = useState(0);
   const [charIdx, setCharIdx] = useState(0);
@@ -58,23 +58,25 @@ export default function Hero({ onStartProject, onExploreWork }) {
             <div className="editorial-tag gold">
               <span>Bespoke Digital Studio</span>
               <span>•</span>
-              <a
-                href="/WebCraft.apk"
-                download="WebCraft.apk"
-                onClick={downloadWebCraftApk}
+              <button
+                type="button"
+                onClick={onOpenInstall}
                 style={{
+                  background: 'none',
+                  border: 'none',
                   color: 'inherit',
-                  textDecoration: 'none',
+                  font: 'inherit',
+                  padding: 0,
+                  cursor: 'pointer',
                   display: 'inline-flex',
                   alignItems: 'center',
-                  gap: '4px',
-                  cursor: 'pointer'
+                  gap: '4px'
                 }}
-                title="Download WebCraft Android App for Chrome"
+                title="Install WebCraft App Shortcut"
               >
                 <Smartphone size={12} color="#B95E3C" />
-                <span>Android .APK</span>
-              </a>
+                <span>Install App</span>
+              </button>
             </div>
 
             <h1 className="hero-headline">
