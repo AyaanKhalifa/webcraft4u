@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowUpRight, Mail, Instagram, Clock, Send, AlertCircle, Copy, ExternalLink, Download, ShieldCheck, Check, RotateCcw, HelpCircle } from 'lucide-react';
+import { ArrowUpRight, Mail, Instagram, Clock, Send, AlertCircle, Copy, ExternalLink, Download, ShieldCheck, Check, RotateCcw, HelpCircle, Smartphone } from 'lucide-react';
 import { downloadWebCraftApk } from '../utils/downloadApk.js';
 
 export default function Contact({ preselectedService, onOpenInstall }) {
