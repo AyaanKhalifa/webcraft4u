@@ -208,10 +208,10 @@ Delivered directly to WebCraft Founders at webcraft.4iu@gmail.com`;
         <div className="contact-layout-grid" id="brief-form-anchor">
           
           {/* Left Column: Direct Channels + Chrome Android APK Download */}
-          <div>
+          <div className="contact-info-col">
             {/* Direct Channel Box */}
             <div className="direct-channel-card">
-              <h3 style={{ color: '#FBF8F2', fontSize: '1.65rem', marginBottom: '0.75rem' }}>
+              <h3 style={{ color: '#FBF8F2', fontSize: 'clamp(1.35rem, 3vw, 1.65rem)', marginBottom: '0.75rem', lineHeight: 1.25 }}>
                 Direct Founder Inbox
               </h3>
               <p style={{ fontSize: '0.9rem', color: 'rgba(240,230,210,0.8)', lineHeight: 1.6, marginBottom: '1.75rem' }}>
@@ -219,39 +219,39 @@ Delivered directly to WebCraft Founders at webcraft.4iu@gmail.com`;
               </p>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <div style={{ width: '40px', height: '40px', backgroundColor: 'rgba(240,230,210,0.1)', borderRadius: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#B99A5B' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
+                  <div style={{ width: '40px', height: '40px', backgroundColor: 'rgba(240,230,210,0.1)', borderRadius: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#B99A5B', flexShrink: 0 }}>
                     <Mail size={20} />
                   </div>
-                  <div>
+                  <div style={{ minWidth: 0, flex: 1, overflowWrap: 'anywhere' }}>
                     <span style={{ display: 'block', fontSize: '0.75rem', textTransform: 'uppercase', color: 'rgba(240,230,210,0.6)' }}>
                       Official Agency Email
                     </span>
-                    <a href="mailto:webcraft.4iu@gmail.com" style={{ color: '#FBF8F2', fontWeight: 700, fontSize: '0.95rem' }}>
+                    <a href="mailto:webcraft.4iu@gmail.com" style={{ color: '#FBF8F2', fontWeight: 700, fontSize: '0.95rem', wordBreak: 'break-all' }}>
                       webcraft.4iu@gmail.com
                     </a>
                   </div>
                 </div>
 
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <div style={{ width: '40px', height: '40px', backgroundColor: 'rgba(240,230,210,0.1)', borderRadius: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#B99A5B' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
+                  <div style={{ width: '40px', height: '40px', backgroundColor: 'rgba(240,230,210,0.1)', borderRadius: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#B99A5B', flexShrink: 0 }}>
                     <Instagram size={20} />
                   </div>
-                  <div>
+                  <div style={{ minWidth: 0, flex: 1, overflowWrap: 'anywhere' }}>
                     <span style={{ display: 'block', fontSize: '0.75rem', textTransform: 'uppercase', color: 'rgba(240,230,210,0.6)' }}>
                       Official Instagram
                     </span>
-                    <a href="https://www.instagram.com/webcraft4u/" target="_blank" rel="noopener" style={{ color: '#FBF8F2', fontWeight: 700, fontSize: '0.95rem' }}>
+                    <a href="https://www.instagram.com/webcraft4u/" target="_blank" rel="noopener" style={{ color: '#FBF8F2', fontWeight: 700, fontSize: '0.95rem', wordBreak: 'break-all' }}>
                       @webcraft4u
                     </a>
                   </div>
                 </div>
 
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <div style={{ width: '40px', height: '40px', backgroundColor: 'rgba(240,230,210,0.1)', borderRadius: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#B99A5B' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
+                  <div style={{ width: '40px', height: '40px', backgroundColor: 'rgba(240,230,210,0.1)', borderRadius: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#B99A5B', flexShrink: 0 }}>
                     <Clock size={20} />
                   </div>
-                  <div>
+                  <div style={{ minWidth: 0, flex: 1 }}>
                     <span style={{ display: 'block', fontSize: '0.75rem', textTransform: 'uppercase', color: 'rgba(240,230,210,0.6)' }}>
                       Response Guarantee
                     </span>
@@ -263,17 +263,16 @@ Delivered directly to WebCraft Founders at webcraft.4iu@gmail.com`;
               </div>
 
               {/* Free 1-Click Fallbacks */}
-              <div style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px solid rgba(240,230,210,0.15)', display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
+              <div style={{ marginTop: '1.75rem', paddingTop: '1.25rem', borderTop: '1px solid rgba(240,230,210,0.15)', display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
                 <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: '#B99A5B', letterSpacing: '0.06em' }}>
                   Free Direct Email Fallbacks:
                 </span>
                 
                 <a
                   href={directMailtoUrl}
-                  className="btn btn-gold"
-                  style={{ width: '100%', fontSize: '0.8rem', padding: '0.75rem 1rem' }}
+                  className="btn btn-gold btn-responsive-full"
                 >
-                  <Mail size={15} />
+                  <Mail size={15} style={{ flexShrink: 0 }} />
                   <span>Send via Native Email App</span>
                 </a>
 
@@ -281,10 +280,10 @@ Delivered directly to WebCraft Founders at webcraft.4iu@gmail.com`;
                   href={gmailWebUrl}
                   target="_blank"
                   rel="noopener"
-                  className="btn btn-outline"
-                  style={{ width: '100%', fontSize: '0.8rem', padding: '0.75rem 1rem', borderColor: 'rgba(240,230,210,0.4)', color: '#F0E6D2' }}
+                  className="btn btn-outline btn-responsive-full"
+                  style={{ borderColor: 'rgba(240,230,210,0.4)', color: '#F0E6D2' }}
                 >
-                  <ExternalLink size={15} />
+                  <ExternalLink size={15} style={{ flexShrink: 0 }} />
                   <span>Send via Web Gmail</span>
                 </a>
 
@@ -299,14 +298,16 @@ Delivered directly to WebCraft Founders at webcraft.4iu@gmail.com`;
                     background: 'transparent',
                     border: '1px dashed rgba(240,230,210,0.3)',
                     color: '#F0E6D2',
-                    padding: '0.5rem',
+                    padding: '0.55rem 0.75rem',
                     fontSize: '0.75rem',
                     borderRadius: '2px',
                     cursor: 'pointer',
-                    marginTop: '0.25rem'
+                    marginTop: '0.25rem',
+                    width: '100%',
+                    boxSizing: 'border-box'
                   }}
                 >
-                  <Copy size={13} />
+                  <Copy size={13} style={{ flexShrink: 0 }} />
                   <span>{copied ? '✓ Brief Copied to Clipboard!' : 'Copy Formatted Brief to Clipboard'}</span>
                 </button>
               </div>
@@ -337,15 +338,14 @@ Delivered directly to WebCraft Founders at webcraft.4iu@gmail.com`;
               <a
                 href="/WebCraft.apk"
                 download="WebCraft.apk"
-                className="btn btn-terracotta"
-                style={{ width: '100%', fontSize: '0.85rem', padding: '0.75rem 1rem' }}
+                className="btn btn-terracotta btn-responsive-full"
               >
-                <Download size={16} />
+                <Download size={16} style={{ flexShrink: 0 }} />
                 <span>Download WebCraft.apk (482 KB)</span>
               </a>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.75rem', fontSize: '0.7rem', color: '#7A786E' }}>
-                <ShieldCheck size={14} color="#253B32" />
+                <ShieldCheck size={14} color="#253B32" style={{ flexShrink: 0 }} />
                 <span>Direct safe download for Android devices via Chrome.</span>
               </div>
             </div>
@@ -450,14 +450,14 @@ Delivered directly to WebCraft Founders at webcraft.4iu@gmail.com`;
                 </div>
 
                 {/* Action Buttons */}
-                <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap', width: '100%' }}>
                   <button
                     type="button"
                     onClick={handleResetForm}
-                    className="btn btn-terracotta"
-                    style={{ fontSize: '0.85rem', padding: '0.75rem 1.25rem' }}
+                    className="btn btn-terracotta btn-responsive-full"
+                    style={{ fontSize: '0.85rem' }}
                   >
-                    <RotateCcw size={16} />
+                    <RotateCcw size={16} style={{ flexShrink: 0 }} />
                     <span>Submit Another Project Brief</span>
                   </button>
 
@@ -465,20 +465,20 @@ Delivered directly to WebCraft Founders at webcraft.4iu@gmail.com`;
                     href={gmailWebUrl}
                     target="_blank"
                     rel="noopener"
-                    className="btn btn-outline"
-                    style={{ fontSize: '0.85rem', padding: '0.75rem 1.25rem' }}
+                    className="btn btn-outline btn-responsive-full"
+                    style={{ fontSize: '0.85rem' }}
                   >
-                    <ExternalLink size={16} />
+                    <ExternalLink size={16} style={{ flexShrink: 0 }} />
                     <span>Open Copy in Web Gmail</span>
                   </a>
 
                   <button
                     type="button"
                     onClick={handleCopy}
-                    className="btn btn-primary"
-                    style={{ fontSize: '0.85rem', padding: '0.75rem 1.25rem' }}
+                    className="btn btn-primary btn-responsive-full"
+                    style={{ fontSize: '0.85rem' }}
                   >
-                    <Copy size={16} />
+                    <Copy size={16} style={{ flexShrink: 0 }} />
                     <span>{copied ? '✓ Copied!' : 'Copy Summary'}</span>
                   </button>
                 </div>
@@ -488,7 +488,7 @@ Delivered directly to WebCraft Founders at webcraft.4iu@gmail.com`;
               /* THE ACTIVE PROJECT BRIEF FORM */
               <>
                 <div className="brief-form-header">
-                  <h3 style={{ fontSize: 'clamp(1.35rem, 3.5vw, 1.65rem)', color: '#253B32', margin: 0 }}>
+                  <h3 style={{ fontSize: 'clamp(1.35rem, 3.5vw, 1.65rem)', color: '#253B32', margin: 0, lineHeight: 1.25 }}>
                     Project Brief Form
                   </h3>
                   <span className="free-submission-pill">
@@ -496,7 +496,7 @@ Delivered directly to WebCraft Founders at webcraft.4iu@gmail.com`;
                   </span>
                 </div>
 
-                <p style={{ fontSize: '0.875rem', color: '#59574D', marginBottom: '1.75rem' }}>
+                <p style={{ fontSize: '0.875rem', color: '#59574D', marginBottom: '1.75rem', lineHeight: 1.6, wordBreak: 'break-word' }}>
                   Complete the brief below. When sent, your project specifications are instantly dispatched to <strong>webcraft.4iu@gmail.com</strong> at zero cost.
                 </p>
 
@@ -648,7 +648,7 @@ Delivered directly to WebCraft Founders at webcraft.4iu@gmail.com`;
                     <label style={{ display: 'block', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.06em', color: '#B95E3C', fontWeight: 700, marginBottom: '0.5rem' }}>
                       3. Key Capabilities Required (Select all that apply):
                     </label>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '0.5rem' }}>
+                    <div className="brief-features-grid">
                       {availableBriefFeatures.map((feat) => {
                         const active = formData.features.includes(feat);
                         return (
@@ -660,14 +660,16 @@ Delivered directly to WebCraft Founders at webcraft.4iu@gmail.com`;
                               display: 'flex',
                               alignItems: 'center',
                               gap: '0.5rem',
-                              padding: '0.5rem 0.65rem',
+                              padding: '0.55rem 0.65rem',
                               borderRadius: '3px',
                               border: active ? '1.5px solid #253B32' : '1px solid rgba(41,40,33,0.18)',
                               backgroundColor: active ? 'rgba(37,59,50,0.08)' : '#FBF8F2',
                               color: '#292821',
                               fontSize: '0.78rem',
                               cursor: 'pointer',
-                              textAlign: 'left'
+                              textAlign: 'left',
+                              minWidth: 0,
+                              wordBreak: 'break-word'
                             }}
                           >
                             <span
@@ -685,7 +687,7 @@ Delivered directly to WebCraft Founders at webcraft.4iu@gmail.com`;
                             >
                               {active && <Check size={10} color="#fff" />}
                             </span>
-                            <span>{feat}</span>
+                            <span style={{ minWidth: 0 }}>{feat}</span>
                           </button>
                         );
                       })}
@@ -710,21 +712,20 @@ Delivered directly to WebCraft Founders at webcraft.4iu@gmail.com`;
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="btn btn-terracotta"
-                    style={{ width: '100%', padding: '1rem' }}
+                    className="btn btn-terracotta btn-brief-submit"
                     disabled={submitting}
                   >
                     {submitting ? (
-                      <span>Transmitting Project Brief to webcraft.4iu@gmail.com...</span>
+                      <span>Transmitting Project Brief...</span>
                     ) : (
                       <>
-                        <span>Submit Project Brief to webcraft.4iu@gmail.com</span>
-                        <Send size={16} />
+                        <span>Submit Project Brief (Free)</span>
+                        <Send size={16} style={{ flexShrink: 0 }} />
                       </>
                     )}
                   </button>
 
-                  <div style={{ marginTop: '1rem', textAlign: 'center', fontSize: '0.75rem', color: '#59574D' }}>
+                  <div style={{ marginTop: '1rem', textAlign: 'center', fontSize: '0.75rem', color: '#59574D', wordBreak: 'break-word' }}>
                     🔒 100% Free of Cost. Delivered directly to <code>webcraft.4iu@gmail.com</code> with zero subscription fees.
                   </div>
                 </form>
