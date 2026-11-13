@@ -175,3 +175,4 @@ export default function InstallAppModal({ isOpen, onClose, onNativeInstall, canP
     </div>
   );
 }
+

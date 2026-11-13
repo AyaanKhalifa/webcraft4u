@@ -63,3 +63,4 @@ export function usePwaInstall() {
     downloadApk: downloadWebCraftApk
   };
 }
+
