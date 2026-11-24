@@ -314,7 +314,7 @@ Delivered directly to WebCraft Founders at webcraft.4iu@gmail.com`;
               </div>
             </div>
 
-            {/* Home Screen App Shortcut (.apk) Card */}
+            {/* Home Screen App Install (.apk) Card */}
             <div className="apk-download-card">
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
                 <img
@@ -324,16 +324,16 @@ Delivered directly to WebCraft Founders at webcraft.4iu@gmail.com`;
                 />
                 <div style={{ minWidth: 0, flex: 1 }}>
                   <h4 style={{ margin: 0, fontSize: '1.1rem', color: '#253B32', lineHeight: 1.25 }}>
-                    WebCraft Shortcut (.apk)
+                    WebCraft App (.apk)
                   </h4>
                   <span className="apk-card-sub">
-                    Direct Browser Shortcut • Zero Download Errors
+                    Direct Browser Install • Zero Download Errors
                   </span>
                 </div>
               </div>
 
               <p style={{ fontSize: '0.825rem', color: '#59574D', lineHeight: 1.5, marginBottom: '1.25rem' }}>
-                Add the official WebCraft app shortcut directly to your phone's home screen. Opens in fullscreen with the wolf icon, instant contact dispatch, and offline support.
+                Install the official WebCraft app directly to your phone's home screen. Opens in fullscreen with the wolf icon, instant contact dispatch, and offline support.
               </p>
 
               <button
@@ -343,16 +343,16 @@ Delivered directly to WebCraft Founders at webcraft.4iu@gmail.com`;
                 style={{ width: '100%' }}
               >
                 <Smartphone size={16} style={{ flexShrink: 0 }} />
-                <span>Get Shortcut .APK (1-Tap)</span>
+                <span>Install .APK (1-Tap)</span>
               </button>
 
               <div style={{ marginTop: '0.85rem', padding: '0.65rem 0.85rem', backgroundColor: '#F0E6D2', borderRadius: '4px', border: '1px solid rgba(41,40,33,0.12)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.25rem', fontSize: '0.75rem', fontWeight: 700, color: '#253B32' }}>
                   <ShieldCheck size={14} color="#253B32" style={{ flexShrink: 0 }} />
-                  <span>Browser Shortcut Tip:</span>
+                  <span>Browser Install Tip:</span>
                 </div>
                 <p style={{ margin: 0, fontSize: '0.72rem', color: '#59574D', lineHeight: 1.45 }}>
-                  Tap <strong>"Get Shortcut .APK"</strong> to place WebCraft directly on your device home screen.
+                  Tap <strong>"Install .APK"</strong> to place WebCraft directly on your device home screen.
                 </p>
               </div>
             </div>

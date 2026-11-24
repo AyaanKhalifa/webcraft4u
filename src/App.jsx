@@ -183,10 +183,10 @@ export default function App() {
             />
             <div style={{ minWidth: 0, lineHeight: 1.2 }}>
               <strong style={{ fontSize: '0.8rem', color: '#FBF8F2', display: 'block', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                WebCraft Shortcut (.apk)
+                WebCraft App (.apk)
               </strong>
               <span style={{ fontSize: '0.68rem', color: '#B99A5B' }}>
-                Add 1-tap shortcut to home screen
+                1-tap install to home screen
               </span>
             </div>
           </div>
@@ -210,7 +210,7 @@ export default function App() {
               }}
             >
               <Smartphone size={13} />
-              <span>Shortcut</span>
+              <span>Install</span>
             </button>
             <button
               type="button"

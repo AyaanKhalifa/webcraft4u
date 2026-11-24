@@ -70,16 +70,16 @@ export default function InstallAppModal({ isOpen, onClose, onNativeInstall, canP
           />
           <div>
             <h3 style={{ margin: 0, fontSize: '1.25rem', color: '#253B32', fontWeight: 800 }}>
-              WebCraft Shortcut (.apk)
+              WebCraft App (.apk)
             </h3>
             <span style={{ fontSize: '0.8rem', color: '#B95E3C', fontWeight: 700 }}>
-              Instant Home Screen Shortcut • Zero Download Errors
+              Instant Home Screen Install • Zero Download Errors
             </span>
           </div>
         </div>
 
         <p style={{ fontSize: '0.875rem', color: '#59574D', lineHeight: 1.6, marginBottom: '1.25rem' }}>
-          Add the official WebCraft shortcut directly to your device home screen. Opens in fullscreen without browser bars, runs fast, and updates automatically.
+          Install the official WebCraft app directly to your device home screen. Opens in fullscreen without browser bars, runs fast, and updates automatically.
         </p>
 
         {/* 1-Tap Auto Install Button (if browser prompt available) */}
@@ -94,7 +94,7 @@ export default function InstallAppModal({ isOpen, onClose, onNativeInstall, canP
             style={{ width: '100%', padding: '0.9rem', fontSize: '1rem', marginBottom: '1rem', gap: '0.5rem' }}
           >
             <Smartphone size={18} />
-            <span>Add Shortcut .APK to Home Screen</span>
+            <span>Install .APK to Home Screen</span>
           </button>
         ) : null}
 

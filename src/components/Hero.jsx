@@ -71,10 +71,10 @@ export default function Hero({ onStartProject, onExploreWork, onOpenInstall }) {
                   alignItems: 'center',
                   gap: '4px'
                 }}
-                title="Add WebCraft Shortcut (.apk) to Home Screen"
+                title="Install WebCraft (.apk) to Home Screen"
               >
                 <Smartphone size={12} color="#B95E3C" />
-                <span>Shortcut .APK</span>
+                <span>Install .APK</span>
               </button>
             </div>
 
