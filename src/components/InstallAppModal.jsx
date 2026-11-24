@@ -70,16 +70,16 @@ export default function InstallAppModal({ isOpen, onClose, onNativeInstall, canP
           />
           <div>
             <h3 style={{ margin: 0, fontSize: '1.25rem', color: '#253B32', fontWeight: 800 }}>
-              WebCraft App Shortcut
+              WebCraft Shortcut (.apk)
             </h3>
             <span style={{ fontSize: '0.8rem', color: '#B95E3C', fontWeight: 700 }}>
-              Instant Home Screen Installation • Zero Download Errors
+              Instant Home Screen Shortcut • Zero Download Errors
             </span>
           </div>
         </div>
 
         <p style={{ fontSize: '0.875rem', color: '#59574D', lineHeight: 1.6, marginBottom: '1.25rem' }}>
-          Get the official WebCraft app directly on your device. Opens in fullscreen without browser bars, runs offline, and updates automatically.
+          Add the official WebCraft shortcut directly to your device home screen. Opens in fullscreen without browser bars, runs fast, and updates automatically.
         </p>
 
         {/* 1-Tap Auto Install Button (if browser prompt available) */}
@@ -94,7 +94,7 @@ export default function InstallAppModal({ isOpen, onClose, onNativeInstall, canP
             style={{ width: '100%', padding: '0.9rem', fontSize: '1rem', marginBottom: '1rem', gap: '0.5rem' }}
           >
             <Smartphone size={18} />
-            <span>Install WebCraft Shortcut Now</span>
+            <span>Add Shortcut .APK to Home Screen</span>
           </button>
         ) : null}
 
@@ -104,12 +104,11 @@ export default function InstallAppModal({ isOpen, onClose, onNativeInstall, canP
             backgroundColor: '#F0E6D2',
             border: '1.5px solid #292821',
             borderRadius: '6px',
-            padding: '1rem',
-            marginBottom: '1.25rem'
+            padding: '1rem'
           }}
         >
           <div style={{ fontSize: '0.8rem', fontWeight: 800, color: '#253B32', marginBottom: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-            {isIOS ? 'How to Add on iPhone / Safari:' : 'How to Install on Chrome / Android:'}
+            {isIOS ? 'How to Add on iPhone / Safari:' : 'How to Add on Chrome / Android:'}
           </div>
 
           {isIOS ? (
@@ -135,41 +134,14 @@ export default function InstallAppModal({ isOpen, onClose, onNativeInstall, canP
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <Smartphone size={16} color="#B95E3C" />
-                <span>2. Tap <strong>"Install app"</strong> or <strong>"Add to Home screen"</strong></span>
+                <span>2. Tap <strong>"Add to Home screen"</strong> or <strong>"Install app"</strong></span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <CheckCircle2 size={16} color="#253B32" />
-                <span>3. Tap <strong>Install</strong> — the shortcut appears instantly on your phone!</span>
+                <span>3. Tap <strong>Add</strong> — the shortcut appears instantly on your phone!</span>
               </div>
             </div>
           )}
-        </div>
-
-        {/* Alternative: Direct APK Download */}
-        <div style={{ borderTop: '1px solid rgba(41,40,33,0.15)', paddingTop: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem' }}>
-          <span style={{ fontSize: '0.75rem', color: '#7A786E' }}>
-            Prefer a standalone file?
-          </span>
-          <button
-            type="button"
-            onClick={downloadWebCraftApk}
-            style={{
-              background: 'transparent',
-              border: '1px solid #B95E3C',
-              color: '#B95E3C',
-              padding: '0.4rem 0.75rem',
-              borderRadius: '4px',
-              fontSize: '0.75rem',
-              fontWeight: 700,
-              cursor: 'pointer',
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.35rem'
-            }}
-          >
-            <Download size={13} />
-            <span>Download .APK (482 KB)</span>
-          </button>
         </div>
       </div>
     </div>

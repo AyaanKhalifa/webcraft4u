@@ -37,7 +37,7 @@ export default function Process() {
   return (
     <section className="process-section" id="process">
       <div className="container">
-        
+
         <div className="editorial-header">
           <div className="editorial-tag terracotta">
             <span>Our Workflow</span>

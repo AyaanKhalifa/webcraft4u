@@ -74,10 +74,10 @@ export default function Navbar({ onOpenContact, onOpenInstall }) {
               onClick={onOpenInstall}
               className="btn btn-outline nav-desktop-cta"
               style={{ fontSize: '0.75rem', padding: '0.45rem 0.75rem', gap: '0.35rem', cursor: 'pointer' }}
-              title="Install WebCraft App Shortcut directly to Home Screen"
+              title="Add WebCraft Shortcut (.apk) directly to Home Screen"
             >
               <Smartphone size={14} color="#B95E3C" />
-              <span>Install App</span>
+              <span>Shortcut .APK</span>
             </button>
 
             <button
@@ -175,7 +175,7 @@ export default function Navbar({ onOpenContact, onOpenInstall }) {
               }}
             >
               <Smartphone size={18} color="#B95E3C" />
-              <span>Install App Shortcut (Instant)</span>
+              <span>Shortcut .APK (Instant)</span>
             </button>
 
             <button

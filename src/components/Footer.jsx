@@ -184,8 +184,8 @@ export default function Footer({ onOpenPrivacy, onOpenTerms, onOpenInstall, onRe
                   style={{ width: '28px', height: '28px', borderRadius: '4px', border: '1px solid rgba(240,230,210,0.3)' }}
                 />
                 <div>
-                  <strong style={{ fontSize: '0.8rem', color: '#FBF8F2', display: 'block' }}>WebCraft App Shortcut</strong>
-                  <span style={{ fontSize: '0.7rem', color: 'rgba(240,230,210,0.6)' }}>1-Tap Browser Auto-Install</span>
+                  <strong style={{ fontSize: '0.8rem', color: '#FBF8F2', display: 'block' }}>WebCraft Shortcut (.apk)</strong>
+                  <span style={{ fontSize: '0.7rem', color: 'rgba(240,230,210,0.6)' }}>1-Tap Browser Shortcut</span>
                 </div>
               </div>
               <button
@@ -194,7 +194,7 @@ export default function Footer({ onOpenPrivacy, onOpenTerms, onOpenInstall, onRe
                 className="btn btn-terracotta"
                 style={{ fontSize: '0.75rem', padding: '0.4rem 0.75rem', cursor: 'pointer' }}
               >
-                Install
+                Get Shortcut
               </button>
             </div>
           </div>
