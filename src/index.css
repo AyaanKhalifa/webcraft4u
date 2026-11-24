@@ -410,8 +410,8 @@ h1, h2, h3, h4, h5, h6 {
    HERO SECTION
    ========================================================================== */
 .hero-wrapper {
-  padding-top: calc(var(--header-height) + clamp(1.25rem, 2.5vw, 2.25rem));
-  padding-bottom: clamp(2.5rem, 4vw, 4rem);
+  padding-top: calc(var(--header-height) + clamp(2rem, 3.5vw, 3.5rem));
+  padding-bottom: clamp(2.5rem, 4.5vw, 4.5rem);
   position: relative;
   overflow: hidden;
   border-bottom: var(--border-editorial);
@@ -419,9 +419,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-editorial-grid {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: clamp(1.5rem, 3vw, 2.75rem);
-  align-items: start;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--space-lg);
+  align-items: center;
 }
 
 .hero-headline {
@@ -474,88 +474,40 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.06em;
 }
 
-/* ==========================================================================
-   HERO EXECUTIVE SHOWCASE CARD (HIGH-END EDITORIAL MASTERY)
-   ========================================================================== */
-.hero-executive-card {
+.hero-visual-frame {
   position: relative;
-  border: 2px solid var(--color-gold);
+  border: 2px solid var(--color-charcoal);
   border-radius: var(--radius-md);
-  background: #121D18;
-  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.55);
+  background: var(--color-paper);
+  box-shadow: 6px 6px 0px var(--color-forest-dark);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.hero-executive-card:hover {
+.hero-visual-frame:hover {
   transform: translateY(-2px);
-  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.65);
+  box-shadow: 8px 8px 0px var(--color-forest-dark);
 }
 
-.hero-exec-header {
-  background: #0D1511;
-  padding: 0.75rem 1.15rem;
+.hero-frame-header {
+  background: var(--color-forest-dark);
+  padding: 0.75rem 1.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(185, 154, 91, 0.3);
+  border-bottom: 2px solid var(--color-charcoal);
 }
 
-.hero-exec-body {
-  padding: clamp(1.25rem, 2.2vw, 1.75rem);
-  background: radial-gradient(circle at 50% 10%, #1A2B23 0%, #121D18 85%);
-  color: #F0E6D2;
+.hero-frame-body {
+  padding: 2.25rem 1.75rem;
+  text-align: center;
+  background: radial-gradient(circle, var(--color-paper-light) 0%, var(--color-paper) 100%);
 }
 
-.hero-exec-logo-stage {
-  background: #FBF8F2;
-  border: 1px solid #B99A5B;
-  border-radius: 6px;
-  padding: 1.15rem 1.5rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  margin-bottom: 1.15rem;
-}
-
-.hero-exec-logo-stage img {
-  width: 100%;
-  max-width: 320px;
-  height: auto;
-  object-fit: contain;
-  display: block;
-}
-
-.hero-exec-pillars {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.65rem;
-  margin-bottom: 1.15rem;
-}
-
-.hero-pillar-item {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(185, 154, 91, 0.22);
-  border-radius: 6px;
-  padding: 0.65rem 0.75rem;
-  text-align: left;
-}
-
-.hero-pillar-item strong {
-  display: block;
-  font-size: 0.82rem;
-  color: #FBF8F2;
-  margin-bottom: 2px;
-}
-
-.hero-pillar-item span {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  color: #B99A5B;
-  letter-spacing: 0.02em;
+.hero-frame-body img {
+  max-height: 200px;
+  margin: 0 auto 1.25rem;
+  filter: drop-shadow(0 4px 12px rgba(37, 59, 50, 0.12));
 }
 
 /* ==========================================================================

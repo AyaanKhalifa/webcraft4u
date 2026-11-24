@@ -1,16 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  ArrowUpRight, 
-  Compass, 
-  ShieldCheck, 
-  Zap, 
-  Smartphone, 
-  Play, 
-  Sparkles,
-  TrendingUp,
-  Layout
-} from 'lucide-react';
+import { ArrowUpRight, Compass, ShieldCheck, Zap, Smartphone } from 'lucide-react';
 import ParticleHeroBackground from './ParticleHeroBackground.jsx';
+import { downloadWebCraftApk } from '../utils/downloadApk.js';
 
 export default function Hero({ onStartProject, onExploreWork, onOpenInstall }) {
   const [typedText, setTypedText] = useState('');
@@ -21,10 +12,10 @@ export default function Hero({ onStartProject, onExploreWork, onOpenInstall }) {
   const phrases = [
     'Fast, Modern Websites for Real Businesses ⚡',
     'Medical & Dental Clinic Booking Systems 🩺',
-    'Online Stores with Frictionless Checkout 🛒',
-    'High-Converting Contractor & Trade Hubs 🛠️',
-    'Salon & Barbershop Appointment Engines ✂️',
-    'Clean React Code & Built-In Google SEO 🚀'
+    'Online Stores with Fast Checkout 🛒',
+    'Barbershop & Salon Appointments ✂️',
+    'Lead-Generating Contractor Websites 🛠️',
+    'Clean React Code & Built-In SEO 🚀'
   ];
 
   useEffect(() => {
@@ -53,22 +44,6 @@ export default function Hero({ onStartProject, onExploreWork, onOpenInstall }) {
     return () => clearTimeout(timer);
   }, [charIdx, isDeleting, phraseIdx]);
 
-  const handleVideoTourClick = (e) => {
-    e.preventDefault();
-    const videoSection = document.getElementById('video-tour');
-    if (videoSection) {
-      videoSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const handleCustomQuoteClick = (e) => {
-    e.preventDefault();
-    const servicesSection = document.getElementById('services');
-    if (servicesSection) {
-      servicesSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section className="hero-wrapper" id="home" style={{ position: 'relative', overflow: 'hidden' }}>
       {/* Interactive Particle Network Canvas */}
@@ -77,13 +52,10 @@ export default function Hero({ onStartProject, onExploreWork, onOpenInstall }) {
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div className="hero-editorial-grid">
           
-          {/* Left Column: Narrative & Clear Business Value */}
+          {/* Left Column: Text & Editorial Hierarchy */}
           <div>
             <div className="editorial-tag gold" style={{ marginBottom: '1.25rem' }}>
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-                <span style={{ width: '7px', height: '7px', borderRadius: '50%', backgroundColor: '#27C93F', display: 'inline-block' }}></span>
-                <span>Accepting Q4 Projects</span>
-              </span>
+              <span>Digital Studio</span>
               <span>•</span>
               <button
                 type="button"
@@ -115,7 +87,7 @@ export default function Hero({ onStartProject, onExploreWork, onOpenInstall }) {
             <div
               style={{
                 fontFamily: "'JetBrains Mono', monospace",
-                fontSize: 'clamp(0.85rem, 1.35vw, 1.05rem)',
+                fontSize: 'clamp(0.85rem, 1.4vw, 1.05rem)',
                 color: '#B95E3C',
                 minHeight: '2rem',
                 display: 'flex',
@@ -143,15 +115,14 @@ export default function Hero({ onStartProject, onExploreWork, onOpenInstall }) {
                 <ArrowUpRight size={18} />
               </button>
 
-              <a
-                href="#video-tour"
+              <button
+                type="button"
                 className="btn btn-outline"
-                onClick={handleVideoTourClick}
-                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
+                onClick={onExploreWork}
               >
-                <Play size={16} fill="currentColor" />
-                <span>Watch Video Tour (3 Lang)</span>
-              </a>
+                <span>Explore Our Work</span>
+                <Compass size={18} />
+              </button>
             </div>
 
             {/* Trust Metrics Strip */}
@@ -161,7 +132,7 @@ export default function Hero({ onStartProject, onExploreWork, onOpenInstall }) {
                 <span>Custom Built</span>
               </div>
               <div className="trust-item">
-                <strong>&lt; 0.8s</strong>
+                <strong>&lt; 1s</strong>
                 <span>Fast Loading</span>
               </div>
               <div className="trust-item">
@@ -170,148 +141,82 @@ export default function Hero({ onStartProject, onExploreWork, onOpenInstall }) {
               </div>
               <div className="trust-item">
                 <strong>24h</strong>
-                <span>Direct Support</span>
+                <span>Quick Response</span>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Executive Craftsmanship Showcase Crest */}
+          {/* Right Column: Distinctive Heritage Editorial Frame featuring logo.png */}
           <div>
-            <div className="hero-executive-card">
-              
-              {/* Window Header */}
-              <div className="hero-exec-header">
-                <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
-                  <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#B95E3C', display: 'inline-block' }}></span>
-                  <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#B99A5B', display: 'inline-block' }}></span>
-                  <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#345145', display: 'inline-block' }}></span>
+            <div className="hero-visual-frame tilt-card">
+              <div className="hero-frame-header">
+                <div style={{ display: 'flex', gap: '6px' }}>
+                  <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#B95E3C' }}></span>
+                  <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#B99A5B' }}></span>
+                  <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#345145' }}></span>
                 </div>
-
                 <span
                   style={{
                     fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: '0.72rem',
-                    color: '#B99A5B',
-                    letterSpacing: '0.08em',
-                    fontWeight: 700,
-                    textTransform: 'uppercase'
+                    fontSize: '0.75rem',
+                    color: '#F0E6D2',
+                    letterSpacing: '0.06em'
                   }}
                 >
-                  WEBCRAFT // BESPOKE STUDIO
+                  WEBCRAFT // VOL. 01
                 </span>
-
-                <span
-                  style={{
-                    fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: '0.68rem',
-                    color: 'rgba(240, 230, 210, 0.6)',
-                    letterSpacing: '0.04em'
-                  }}
-                >
-                  VOL. 01
-                </span>
+                <div style={{ width: '32px' }}></div>
               </div>
 
-              {/* Showcase Body */}
-              <div className="hero-exec-body">
-                
-                {/* Official Logo Display Stage */}
-                <div className="hero-exec-logo-stage">
-                  <img
-                    src="/logo.png"
-                    alt="WebCraft Official Logo"
-                  />
-                  <span
-                    style={{
-                      position: 'absolute',
-                      top: '8px',
-                      right: '8px',
-                      fontFamily: "'JetBrains Mono', monospace",
-                      fontSize: '0.65rem',
-                      color: '#253B32',
-                      background: 'rgba(185, 154, 91, 0.25)',
-                      padding: '2px 6px',
-                      borderRadius: '4px',
-                      fontWeight: 700,
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '4px'
-                    }}
-                  >
-                    <ShieldCheck size={11} color="#253B32" />
-                    VERIFIED
-                  </span>
-                </div>
-
-                {/* 2x2 Craftsmanship Pillars Grid */}
-                <div className="hero-exec-pillars">
-                  <div className="hero-pillar-item">
-                    <strong>⚡ Sub-Second Speed</strong>
-                    <span>&lt; 0.8s Core Web Vitals</span>
-                  </div>
-
-                  <div className="hero-pillar-item">
-                    <strong>🛡️ 100% Custom Code</strong>
-                    <span>Zero Bloated Plugins</span>
-                  </div>
-
-                  <div className="hero-pillar-item">
-                    <strong>📈 Google Local SEO</strong>
-                    <span>Schema & Rank Ready</span>
-                  </div>
-
-                  <div className="hero-pillar-item">
-                    <strong>📱 Mobile-First UX</strong>
-                    <span>Flawless On Every Screen</span>
-                  </div>
-                </div>
-
-                {/* Wolf Standard Credo Quote */}
-                <div
-                  style={{
-                    borderTop: '1px solid rgba(185, 154, 91, 0.25)',
-                    paddingTop: '0.85rem',
-                    marginBottom: '1rem',
-                    textAlign: 'center'
-                  }}
-                >
-                  <p
-                    style={{
-                      fontFamily: "'DM Serif Display', Georgia, serif",
-                      fontStyle: 'italic',
-                      fontSize: '0.88rem',
-                      color: '#F0E6D2',
-                      lineHeight: 1.5,
-                      margin: 0,
-                      opacity: 0.95
-                    }}
-                  >
-                    "The wolf represents trust, loyalty, intelligence, reliability, and confidence."
-                  </p>
-                </div>
-
-                {/* Direct Action: Jump to Custom Quote Builder */}
-                <a
-                  href="#services"
-                  onClick={handleCustomQuoteClick}
-                  className="btn btn-terracotta"
+              <div className="hero-frame-body">
+                {/* Official Logo (logo.png) */}
+                <img
+                  src="/logo.png"
+                  alt="WebCraft Official Logo"
                   style={{
                     width: '100%',
-                    padding: '0.8rem 1rem',
+                    maxWidth: '440px',
+                    height: 'auto',
+                    objectFit: 'contain'
+                  }}
+                />
+
+                <div
+                  style={{
+                    borderTop: '1px solid rgba(41, 40, 33, 0.15)',
+                    paddingTop: '1.25rem',
+                    marginTop: '1rem',
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'center',
-                    gap: '0.5rem',
-                    fontSize: '0.85rem'
+                    justifyContent: 'space-between',
+                    fontSize: '0.8rem',
+                    color: '#59574D'
                   }}
                 >
-                  <span>Build Your Custom Website Quote</span>
-                  <ArrowUpRight size={15} />
-                </a>
-
+                  <span style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#253B32', fontWeight: 700 }}>
+                    <ShieldCheck size={16} color="#B99A5B" />
+                    The Wolf Standard
+                  </span>
+                  <span style={{ fontFamily: "'JetBrains Mono', monospace" }}>
+                    Heritage × Modern
+                  </span>
+                </div>
               </div>
-
             </div>
+
+            {/* Editorial Caption */}
+            <p
+              style={{
+                fontFamily: "'DM Serif Display', Georgia, serif",
+                fontStyle: 'italic',
+                fontSize: '0.9rem',
+                color: '#59574D',
+                marginTop: '1rem',
+                textAlign: 'center'
+              }}
+            >
+              "The wolf represents trust, loyalty, intelligence, reliability, and confidence."
+            </p>
           </div>
 
         </div>
