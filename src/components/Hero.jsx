@@ -1,5 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowUpRight, Compass, ShieldCheck, Zap, Smartphone, CheckCircle2, Star, Calendar, Clock } from 'lucide-react';
+import { 
+  ArrowUpRight, 
+  Compass, 
+  ShieldCheck, 
+  Zap, 
+  Smartphone, 
+  CheckCircle2, 
+  Star, 
+  Calendar, 
+  Clock, 
+  Sparkles, 
+  RefreshCw 
+} from 'lucide-react';
 import ParticleHeroBackground from './ParticleHeroBackground.jsx';
 import { downloadWebCraftApk } from '../utils/downloadApk.js';
 
@@ -8,10 +20,55 @@ export default function Hero({ onStartProject, onExploreWork, onOpenInstall }) {
   const [phraseIdx, setPhraseIdx] = useState(0);
   const [charIdx, setCharIdx] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [displayMode, setDisplayMode] = useState('brand'); // 'brand' | 'booking'
-  const [selectedService, setSelectedService] = useState('Consultation');
+  
+  // Right Column Display Mode: 'brand' (Wolf Standard Cream Card) | 'booking' (Live Business Booking Demo)
+  const [displayMode, setDisplayMode] = useState('brand');
+  const [activeIndustry, setActiveIndustry] = useState('clinic'); // 'clinic' | 'salon' | 'contractor'
+  const [selectedServiceIdx, setSelectedServiceIdx] = useState(1);
   const [bookingSlot, setBookingSlot] = useState('Today 2:30 PM');
   const [bookingDone, setBookingDone] = useState(false);
+
+  const demoIndustries = {
+    clinic: {
+      name: 'Aura Dental & Aesthetic Clinic',
+      category: 'Medical & Dental Clinic',
+      rating: '4.9',
+      reviews: '340+ Reviews',
+      doctor: 'Dr. Sarah Mehta, BDS',
+      services: [
+        { name: 'Consultation', price: '$50', time: '30m' },
+        { name: 'Laser Whitening', price: '$120', time: '45m' },
+        { name: 'Dental Implants', price: '$250', time: '60m' }
+      ]
+    },
+    salon: {
+      name: 'The Crown Studio & Barber Lounge',
+      category: 'Luxury Salon & Barbershop',
+      rating: '5.0',
+      reviews: '280+ Reviews',
+      doctor: 'Marcus Vance, Master Stylist',
+      services: [
+        { name: 'Haircut & Beard', price: '$45', time: '35m' },
+        { name: 'Skin Facial Care', price: '$75', time: '50m' },
+        { name: 'Full VIP Package', price: '$110', time: '75m' }
+      ]
+    },
+    contractor: {
+      name: 'Apex Electrical & Solar Pro',
+      category: 'Licensed Trade Contractor',
+      rating: '4.8',
+      reviews: '190+ Reviews',
+      doctor: 'David Miller, Master Tech',
+      services: [
+        { name: 'Diagnostic Visit', price: '$65', time: '40m' },
+        { name: 'EV Charger Setup', price: '$180', time: '90m' },
+        { name: 'Solar Panel Quote', price: '$90', time: '60m' }
+      ]
+    }
+  };
+
+  const currentIndustry = demoIndustries[activeIndustry];
+  const selectedService = currentIndustry.services[selectedServiceIdx] || currentIndustry.services[0];
 
   const phrases = [
     'Fast, Modern Websites for Real Businesses ⚡',
@@ -58,7 +115,7 @@ export default function Hero({ onStartProject, onExploreWork, onOpenInstall }) {
           
           {/* Left Column: Text & Editorial Hierarchy */}
           <div>
-            <div className="editorial-tag gold" style={{ marginBottom: '1.25rem' }}>
+            <div className="editorial-tag gold" style={{ marginBottom: '1.15rem' }}>
               <span>Digital Studio</span>
               <span>•</span>
               <button
@@ -153,6 +210,8 @@ export default function Hero({ onStartProject, onExploreWork, onOpenInstall }) {
           {/* Right Column: Distinctive Heritage Editorial Frame featuring logo.png + Live Booking Sample */}
           <div>
             <div className="hero-visual-frame tilt-card">
+              
+              {/* Frame Header Bar */}
               <div className="hero-frame-header" style={{ padding: '0.65rem 1rem' }}>
                 <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
                   <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#B95E3C', display: 'inline-block' }}></span>
@@ -254,153 +313,265 @@ export default function Hero({ onStartProject, onExploreWork, onOpenInstall }) {
                 </div>
               )}
 
-              {/* Display 2: Live Sample Website For Business Owners (Booking & Intake) */}
+              {/* Display 2: Attractive, Multi-Industry Live Booking Sample for Business Owners */}
               {displayMode === 'booking' && (
-                <div style={{ padding: '1.25rem 1.35rem', background: '#FBF8F2', textAlign: 'left' }}>
+                <div style={{ padding: '1.15rem 1.25rem', background: '#FBF8F2', textAlign: 'left' }}>
                   
-                  {/* Business Client Header */}
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.75rem' }}>
+                  {/* Industry Presets Tabs */}
+                  <div style={{ display: 'flex', gap: '4px', marginBottom: '0.75rem', borderBottom: '1px solid rgba(41,40,33,0.1)', paddingBottom: '0.5rem' }}>
+                    {[
+                      { id: 'clinic', label: '🩺 Clinic' },
+                      { id: 'salon', label: '✂️ Salon & Spa' },
+                      { id: 'contractor', label: '🛠️ Trade Pro' }
+                    ].map((tab) => (
+                      <button
+                        key={tab.id}
+                        type="button"
+                        onClick={() => { setActiveIndustry(tab.id); setSelectedServiceIdx(0); setBookingDone(false); }}
+                        style={{
+                          fontFamily: "'JetBrains Mono', monospace",
+                          fontSize: '0.68rem',
+                          padding: '3px 8px',
+                          borderRadius: '4px',
+                          border: activeIndustry === tab.id ? '1px solid #253B32' : '1px solid transparent',
+                          backgroundColor: activeIndustry === tab.id ? '#253B32' : 'rgba(41,40,33,0.05)',
+                          color: activeIndustry === tab.id ? '#FBF8F2' : '#59574D',
+                          cursor: 'pointer',
+                          fontWeight: activeIndustry === tab.id ? 700 : 500
+                        }}
+                      >
+                        {tab.label}
+                      </button>
+                    ))}
+                  </div>
+
+                  {!bookingDone ? (
                     <div>
-                      <div style={{ fontSize: '0.65rem', textTransform: 'uppercase', color: '#B95E3C', fontWeight: 700, letterSpacing: '0.06em' }}>
-                        Sample Client Website
-                      </div>
-                      <h4 style={{ fontSize: '1.05rem', color: '#253B32', margin: '2px 0', lineHeight: 1.2 }}>
-                        Aura Dental & Aesthetic Clinic
-                      </h4>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '0.72rem', color: '#59574D' }}>
-                        <Star size={11} fill="#B99A5B" color="#B99A5B" />
-                        <strong>4.9</strong>
-                        <span>(320+ Google Reviews) • London</span>
-                      </div>
-                    </div>
-                    <span
-                      style={{
-                        backgroundColor: 'rgba(37, 59, 50, 0.08)',
-                        color: '#253B32',
-                        fontFamily: "'JetBrains Mono', monospace",
-                        fontSize: '0.65rem',
-                        padding: '2px 6px',
-                        borderRadius: '4px',
-                        fontWeight: 700
-                      }}
-                    >
-                      ⚡ 0.4s Fast Load
-                    </span>
-                  </div>
-
-                  {/* Service Selector */}
-                  <div style={{ marginBottom: '0.65rem' }}>
-                    <div style={{ fontSize: '0.72rem', color: '#59574D', marginBottom: '4px', fontWeight: 600 }}>
-                      1. Select Treatment / Service:
-                    </div>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '4px' }}>
-                      {[
-                        { name: 'Consultation', price: '$50' },
-                        { name: 'Laser Care', price: '$120' },
-                        { name: 'Implants', price: '$250' }
-                      ].map((item) => (
-                        <button
-                          key={item.name}
-                          type="button"
-                          onClick={() => { setSelectedService(item.name); setBookingDone(false); }}
+                      {/* Business Client Profile Header */}
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.65rem' }}>
+                        <div>
+                          <div style={{ fontSize: '0.65rem', textTransform: 'uppercase', color: '#B95E3C', fontWeight: 700, letterSpacing: '0.06em' }}>
+                            {currentIndustry.category}
+                          </div>
+                          <h4 style={{ fontSize: '1rem', color: '#253B32', margin: '2px 0', lineHeight: 1.25 }}>
+                            {currentIndustry.name}
+                          </h4>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '0.72rem', color: '#59574D' }}>
+                            <Star size={11} fill="#B99A5B" color="#B99A5B" />
+                            <strong>{currentIndustry.rating}</strong>
+                            <span>({currentIndustry.reviews}) • {currentIndustry.doctor}</span>
+                          </div>
+                        </div>
+                        <span
                           style={{
-                            padding: '5px 4px',
-                            fontSize: '0.68rem',
+                            backgroundColor: 'rgba(37, 59, 50, 0.08)',
+                            color: '#253B32',
+                            fontFamily: "'JetBrains Mono', monospace",
+                            fontSize: '0.65rem',
+                            padding: '2px 6px',
                             borderRadius: '4px',
-                            border: selectedService === item.name ? '2px solid #253B32' : '1px solid rgba(41,40,33,0.15)',
-                            backgroundColor: selectedService === item.name ? '#253B32' : '#FFFFFF',
-                            color: selectedService === item.name ? '#FBF8F2' : '#292821',
-                            cursor: 'pointer',
-                            textAlign: 'center',
-                            fontWeight: selectedService === item.name ? 700 : 500
+                            fontWeight: 700
                           }}
                         >
-                          <div>{item.name}</div>
-                          <div style={{ fontSize: '0.62rem', opacity: 0.85 }}>{item.price}</div>
-                        </button>
-                      ))}
-                    </div>
-                  </div>
+                          ⚡ 0.4s Fast
+                        </span>
+                      </div>
 
-                  {/* Available Time Slots */}
-                  <div style={{ marginBottom: '0.75rem' }}>
-                    <div style={{ fontSize: '0.72rem', color: '#59574D', marginBottom: '4px', fontWeight: 600 }}>
-                      2. Choose Appointment Slot:
-                    </div>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '4px' }}>
-                      {['Today 2:30 PM', 'Today 5:00 PM', 'Tomorrow 11 AM'].map((slot) => (
-                        <button
-                          key={slot}
-                          type="button"
-                          onClick={() => { setBookingSlot(slot); setBookingDone(false); }}
-                          style={{
-                            padding: '6px 4px',
-                            fontSize: '0.68rem',
-                            borderRadius: '4px',
-                            border: bookingSlot === slot ? '2px solid #B95E3C' : '1px solid rgba(41,40,33,0.15)',
-                            backgroundColor: bookingSlot === slot ? 'rgba(185, 94, 60, 0.12)' : '#FFFFFF',
-                            color: bookingSlot === slot ? '#B95E3C' : '#292821',
-                            cursor: 'pointer',
-                            textAlign: 'center',
-                            fontWeight: bookingSlot === slot ? 700 : 500
-                          }}
-                        >
-                          {slot}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
+                      {/* 1. Service Selection */}
+                      <div style={{ marginBottom: '0.65rem' }}>
+                        <div style={{ fontSize: '0.72rem', color: '#59574D', marginBottom: '4px', fontWeight: 600 }}>
+                          1. Select Service / Treatment:
+                        </div>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '5px' }}>
+                          {currentIndustry.services.map((item, idx) => (
+                            <button
+                              key={item.name}
+                              type="button"
+                              onClick={() => setSelectedServiceIdx(idx)}
+                              style={{
+                                padding: '6px 4px',
+                                fontSize: '0.68rem',
+                                borderRadius: '4px',
+                                border: selectedServiceIdx === idx ? '2px solid #253B32' : '1px solid rgba(41,40,33,0.15)',
+                                backgroundColor: selectedServiceIdx === idx ? '#253B32' : '#FFFFFF',
+                                color: selectedServiceIdx === idx ? '#FBF8F2' : '#292821',
+                                cursor: 'pointer',
+                                textAlign: 'center',
+                                fontWeight: selectedServiceIdx === idx ? 700 : 500,
+                                transition: 'all 0.15s ease'
+                              }}
+                            >
+                              <div style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{item.name}</div>
+                              <div style={{ fontSize: '0.62rem', opacity: 0.9, marginTop: '1px', fontWeight: 700 }}>
+                                {item.price} • {item.time}
+                              </div>
+                            </button>
+                          ))}
+                        </div>
+                      </div>
 
-                  {/* Book Now Button */}
-                  <button
-                    type="button"
-                    onClick={() => setBookingDone(true)}
-                    style={{
-                      width: '100%',
-                      padding: '0.65rem 0.75rem',
-                      backgroundColor: bookingDone ? '#253B32' : '#B95E3C',
-                      color: '#FBF8F2',
-                      border: 'none',
-                      borderRadius: '4px',
-                      fontWeight: 700,
-                      fontSize: '0.78rem',
-                      cursor: 'pointer',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      gap: '6px',
-                      transition: 'all 0.2s'
-                    }}
-                  >
-                    {bookingDone ? (
-                      <>
-                        <CheckCircle2 size={13} color="#27C93F" />
-                        <span>✓ Reserved {selectedService} for {bookingSlot}! SMS Sent</span>
-                      </>
-                    ) : (
-                      <>
+                      {/* 2. Choose Time Slot */}
+                      <div style={{ marginBottom: '0.75rem' }}>
+                        <div style={{ fontSize: '0.72rem', color: '#59574D', marginBottom: '4px', fontWeight: 600 }}>
+                          2. Available Time Slot:
+                        </div>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '5px' }}>
+                          {['Today 2:30 PM', 'Today 5:00 PM', 'Tomorrow 11 AM'].map((slot) => (
+                            <button
+                              key={slot}
+                              type="button"
+                              onClick={() => setBookingSlot(slot)}
+                              style={{
+                                padding: '6px 4px',
+                                fontSize: '0.68rem',
+                                borderRadius: '4px',
+                                border: bookingSlot === slot ? '2px solid #B95E3C' : '1px solid rgba(41,40,33,0.15)',
+                                backgroundColor: bookingSlot === slot ? 'rgba(185, 94, 60, 0.12)' : '#FFFFFF',
+                                color: bookingSlot === slot ? '#B95E3C' : '#292821',
+                                cursor: 'pointer',
+                                textAlign: 'center',
+                                fontWeight: bookingSlot === slot ? 700 : 500
+                              }}
+                            >
+                              {slot}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* 3. Instant Booking Button */}
+                      <button
+                        type="button"
+                        onClick={() => setBookingDone(true)}
+                        style={{
+                          width: '100%',
+                          padding: '0.7rem 0.85rem',
+                          backgroundColor: '#B95E3C',
+                          color: '#FBF8F2',
+                          border: 'none',
+                          borderRadius: '4px',
+                          fontWeight: 700,
+                          fontSize: '0.8rem',
+                          cursor: 'pointer',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          gap: '6px',
+                          boxShadow: '0 2px 8px rgba(185,94,60,0.25)',
+                          transition: 'all 0.2s'
+                        }}
+                      >
                         <span>Confirm Instant Booking for {bookingSlot}</span>
-                        <ArrowUpRight size={13} />
-                      </>
-                    )}
-                  </button>
+                        <ArrowUpRight size={14} />
+                      </button>
 
-                  {/* Business Value strip */}
-                  <div
-                    style={{
-                      borderTop: '1px solid rgba(41, 40, 33, 0.12)',
-                      paddingTop: '0.6rem',
-                      marginTop: '0.65rem',
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      fontSize: '0.66rem',
-                      color: '#59574D'
-                    }}
-                  >
-                    <span>✓ 0% Commissions</span>
-                    <span>✓ Google Calendar Sync</span>
-                    <span>✓ 100% Mobile Ready</span>
-                  </div>
+                      {/* Value Strip */}
+                      <div
+                        style={{
+                          borderTop: '1px solid rgba(41, 40, 33, 0.12)',
+                          paddingTop: '0.55rem',
+                          marginTop: '0.65rem',
+                          display: 'flex',
+                          justifyContent: 'space-between',
+                          fontSize: '0.66rem',
+                          color: '#59574D'
+                        }}
+                      >
+                        <span>✓ 0% Commissions</span>
+                        <span>✓ Google Calendar Sync</span>
+                        <span>✓ Automated SMS Confirmation</span>
+                      </div>
+                    </div>
+                  ) : (
+                    /* The Complete Process & Outcome Screen: What happens after customer books */
+                    <div style={{ textAlign: 'center', padding: '0.5rem 0' }}>
+                      <div
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          width: '38px',
+                          height: '38px',
+                          borderRadius: '50%',
+                          backgroundColor: 'rgba(39, 201, 63, 0.15)',
+                          color: '#27C93F',
+                          marginBottom: '0.5rem'
+                        }}
+                      >
+                        <CheckCircle2 size={24} color="#27C93F" />
+                      </div>
+
+                      <div style={{ fontSize: '0.68rem', fontFamily: "'JetBrains Mono', monospace", color: '#B95E3C', fontWeight: 700 }}>
+                        BOOKING ID: #WC-9842 • COMPLETED IN 0.3s
+                      </div>
+
+                      <h4 style={{ fontSize: '1.05rem', color: '#253B32', margin: '4px 0 6px' }}>
+                        Appointment Confirmed & Synchronized!
+                      </h4>
+
+                      <div
+                        style={{
+                          background: '#FFFFFF',
+                          border: '1px solid rgba(41, 40, 33, 0.12)',
+                          borderRadius: '6px',
+                          padding: '0.65rem 0.85rem',
+                          fontSize: '0.74rem',
+                          textAlign: 'left',
+                          marginBottom: '0.75rem',
+                          lineHeight: 1.55
+                        }}
+                      >
+                        <div>• <strong>Business:</strong> {currentIndustry.name}</div>
+                        <div>• <strong>Service:</strong> {selectedService.name} ({selectedService.price})</div>
+                        <div>• <strong>Slot:</strong> {bookingSlot} with {currentIndustry.doctor}</div>
+                        <div style={{ color: '#27C93F', fontWeight: 600 }}>• <strong>Automations:</strong> SMS Sent • Calendar Synced • WhatsApp Reminder Ready</div>
+                      </div>
+
+                      {/* Direct CTA to Business Owner */}
+                      <button
+                        type="button"
+                        onClick={onStartProject}
+                        style={{
+                          width: '100%',
+                          padding: '0.65rem 0.85rem',
+                          backgroundColor: '#253B32',
+                          color: '#FBF8F2',
+                          border: '1px solid #B99A5B',
+                          borderRadius: '4px',
+                          fontWeight: 700,
+                          fontSize: '0.78rem',
+                          cursor: 'pointer',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          gap: '6px',
+                          marginBottom: '0.45rem'
+                        }}
+                      >
+                        <span>Build This Booking Engine For Your Website</span>
+                        <ArrowUpRight size={13} />
+                      </button>
+
+                      <button
+                        type="button"
+                        onClick={() => setBookingDone(false)}
+                        style={{
+                          background: 'none',
+                          border: 'none',
+                          color: '#7A786E',
+                          cursor: 'pointer',
+                          fontSize: '0.7rem',
+                          textDecoration: 'underline',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '4px'
+                        }}
+                      >
+                        <RefreshCw size={11} />
+                        <span>Test Another Booking</span>
+                      </button>
+                    </div>
+                  )}
 
                 </div>
               )}
