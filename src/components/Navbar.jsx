@@ -24,6 +24,7 @@ export default function Navbar({ onOpenContact, onOpenInstall }) {
 
   const navLinks = [
     { label: 'Home', href: '#home' },
+    { label: 'Video Tour', href: '#video-tour' },
     { label: 'Services & Pricing', href: '#services' },
     { label: 'Work', href: '#work' },
     { label: 'Process', href: '#process' },

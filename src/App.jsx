@@ -4,6 +4,7 @@ import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
 import MarqueeTicker from './components/MarqueeTicker.jsx';
 import BrandIntro from './components/BrandIntro.jsx';
+import VideoShowcase from './components/VideoShowcase.jsx';
 import Services from './components/Services.jsx';
 import Portfolio from './components/Portfolio.jsx';
 import Process from './components/Process.jsx';
@@ -106,6 +107,7 @@ export default function App() {
           />
           <MarqueeTicker />
           <BrandIntro />
+          <VideoShowcase onStartProject={() => scrollToContact()} />
           <Services onSelectService={(svc) => scrollToContact(svc)} />
           <Portfolio
             onOpenCaseStudy={(proj) => setSelectedCaseStudy(proj)}

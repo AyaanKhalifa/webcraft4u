@@ -98,6 +98,7 @@ export default function Footer({ onOpenPrivacy, onOpenTerms, onOpenInstall, onRe
             </h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
               <li><a href="#home" onClick={(e) => handleScrollTo(e, '#home')} style={{ color: 'rgba(240,230,210,0.8)', fontSize: '0.875rem' }}>Home</a></li>
+              <li><a href="#video-tour" onClick={(e) => handleScrollTo(e, '#video-tour')} style={{ color: 'rgba(240,230,210,0.8)', fontSize: '0.875rem' }}>Video Tour</a></li>
               <li><a href="#services" onClick={(e) => handleScrollTo(e, '#services')} style={{ color: 'rgba(240,230,210,0.8)', fontSize: '0.875rem' }}>Services</a></li>
               <li><a href="#work" onClick={(e) => handleScrollTo(e, '#work')} style={{ color: 'rgba(240,230,210,0.8)', fontSize: '0.875rem' }}>Selected Work</a></li>
               <li><a href="#process" onClick={(e) => handleScrollTo(e, '#process')} style={{ color: 'rgba(240,230,210,0.8)', fontSize: '0.875rem' }}>Our Process</a></li>
