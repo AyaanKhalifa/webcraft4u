@@ -147,77 +147,160 @@ export default function Hero({ onStartProject, onExploreWork, onOpenInstall }) {
             </div>
           </div>
 
-          {/* Right Column: Distinctive Heritage Editorial Frame featuring logo.png */}
+          {/* Right Column: Distinctive Heritage Editorial Frame matching "Your Custom Quote" dark luxury aesthetic */}
           <div>
             <div className="hero-visual-frame tilt-card">
               <div className="hero-frame-header">
-                <div style={{ display: 'flex', gap: '6px' }}>
-                  <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#B95E3C' }}></span>
-                  <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#B99A5B' }}></span>
-                  <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#345145' }}></span>
+                <div style={{ display: 'flex', gap: '7px', alignItems: 'center' }}>
+                  <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#B95E3C', display: 'inline-block' }}></span>
+                  <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#B99A5B', display: 'inline-block' }}></span>
+                  <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#345145', display: 'inline-block' }}></span>
                 </div>
                 <span
                   style={{
                     fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: '0.75rem',
-                    color: '#F0E6D2',
-                    letterSpacing: '0.06em'
+                    fontSize: '0.72rem',
+                    color: '#B99A5B',
+                    letterSpacing: '0.08em',
+                    textTransform: 'uppercase',
+                    fontWeight: 600
                   }}
                 >
-                  WEBCRAFT // VOL. 01
+                  WEBCRAFT // BESPOKE STUDIO
                 </span>
-                <div style={{ width: '32px' }}></div>
+                <span
+                  style={{
+                    fontFamily: "'JetBrains Mono', monospace",
+                    fontSize: '0.68rem',
+                    color: 'rgba(240, 230, 210, 0.6)',
+                    letterSpacing: '0.04em'
+                  }}
+                >
+                  VOL. 01
+                </span>
               </div>
 
               <div className="hero-frame-body">
-                {/* Official Logo (logo.png) */}
-                <img
-                  src="/logo.png"
-                  alt="WebCraft Official Logo"
-                  style={{
-                    width: '100%',
-                    maxWidth: '440px',
-                    height: 'auto',
-                    objectFit: 'contain'
-                  }}
-                />
-
+                {/* Official Logo Display on Luxury Ivory Plaque for Maximum Contrast */}
                 <div
                   style={{
-                    borderTop: '1px solid rgba(41, 40, 33, 0.15)',
-                    paddingTop: '1.25rem',
-                    marginTop: '1rem',
+                    background: '#FBF8F2',
+                    borderRadius: '6px',
+                    padding: '1.25rem 1.5rem',
+                    border: '1px solid #B99A5B',
+                    boxShadow: '0 4px 18px rgba(0, 0, 0, 0.25)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginBottom: '1.15rem'
+                  }}
+                >
+                  <img
+                    src="/logo.png"
+                    alt="WebCraft Official Logo"
+                    style={{
+                      width: '100%',
+                      maxWidth: '340px',
+                      height: 'auto',
+                      objectFit: 'contain'
+                    }}
+                  />
+                </div>
+
+                {/* Badge Row */}
+                <div
+                  style={{
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'space-between',
-                    fontSize: '0.8rem',
-                    color: '#59574D'
+                    fontSize: '0.82rem',
+                    color: '#F0E6D2',
+                    marginBottom: '1rem',
+                    flexWrap: 'wrap',
+                    gap: '0.5rem'
                   }}
                 >
-                  <span style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#253B32', fontWeight: 700 }}>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem', color: '#B99A5B', fontWeight: 700 }}>
                     <ShieldCheck size={16} color="#B99A5B" />
                     The Wolf Standard
                   </span>
-                  <span style={{ fontFamily: "'JetBrains Mono', monospace" }}>
+                  <span
+                    style={{
+                      fontFamily: "'JetBrains Mono', monospace",
+                      fontSize: '0.72rem',
+                      color: '#F0E6D2',
+                      background: 'rgba(185, 154, 91, 0.16)',
+                      border: '1px solid rgba(185, 154, 91, 0.35)',
+                      padding: '2px 8px',
+                      borderRadius: '4px'
+                    }}
+                  >
                     Heritage × Modern
                   </span>
                 </div>
+
+                {/* Value Metrics — matching "Your Custom Quote" card styling */}
+                <div
+                  style={{
+                    textAlign: 'left',
+                    borderTop: '1px solid rgba(185, 154, 91, 0.25)',
+                    borderBottom: '1px solid rgba(185, 154, 91, 0.25)',
+                    paddingBlock: '0.85rem',
+                    marginBottom: '1rem',
+                    fontSize: '0.82rem',
+                    color: 'rgba(240, 230, 210, 0.85)',
+                    lineHeight: 1.65
+                  }}
+                >
+                  <p style={{ margin: '0 0 0.35rem 0' }}>
+                    • <strong style={{ color: '#FBF8F2' }}>Foundation:</strong> 100% Custom Code (Zero Slow Templates)
+                  </p>
+                  <p style={{ margin: '0 0 0.35rem 0' }}>
+                    • <strong style={{ color: '#FBF8F2' }}>Performance:</strong> Sub-Second Speed & 95+ Core Web Vitals
+                  </p>
+                  <p style={{ margin: '0 0 0.35rem 0' }}>
+                    • <strong style={{ color: '#FBF8F2' }}>Architecture:</strong> Google SEO & High-Converting UX
+                  </p>
+                  <p style={{ margin: '0', color: '#B99A5B' }}>
+                    • <strong style={{ color: '#B99A5B' }}>Standard:</strong> The Wolf Guarantee — Trust & Reliability
+                  </p>
+                </div>
+
+                {/* Wolf Quote */}
+                <p
+                  style={{
+                    fontFamily: "'DM Serif Display', Georgia, serif",
+                    fontStyle: 'italic',
+                    fontSize: '0.9rem',
+                    color: '#F0E6D2',
+                    margin: '0 0 1.15rem 0',
+                    lineHeight: 1.5,
+                    opacity: 0.95
+                  }}
+                >
+                  "The wolf represents trust, loyalty, intelligence, reliability, and confidence."
+                </p>
+
+                {/* Direct Action Button matching Custom Quote Terracotta Button */}
+                <button
+                  type="button"
+                  className="btn btn-terracotta"
+                  style={{
+                    width: '100%',
+                    padding: '0.85rem 1rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '0.5rem',
+                    fontSize: '0.88rem'
+                  }}
+                  onClick={onStartProject}
+                >
+                  <span>Build With WebCraft</span>
+                  <ArrowUpRight size={16} />
+                </button>
               </div>
             </div>
-
-            {/* Editorial Caption */}
-            <p
-              style={{
-                fontFamily: "'DM Serif Display', Georgia, serif",
-                fontStyle: 'italic',
-                fontSize: '0.9rem',
-                color: '#59574D',
-                marginTop: '1rem',
-                textAlign: 'center'
-              }}
-            >
-              "The wolf represents trust, loyalty, intelligence, reliability, and confidence."
-            </p>
           </div>
 
         </div>
