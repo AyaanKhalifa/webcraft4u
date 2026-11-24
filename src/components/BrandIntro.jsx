@@ -17,7 +17,7 @@ export default function BrandIntro() {
           {/* Left: Editorial Statement */}
           <div>
             <div className="editorial-tag terracotta">
-              <span>Brand Manifesto</span>
+              <span>About WebCraft</span>
             </div>
 
             <h2
@@ -28,7 +28,7 @@ export default function BrandIntro() {
                 lineHeight: 1.15
               }}
             >
-              We Reject Assembly-Line Web Design. We Practice Digital Craft.
+              Custom Websites Built for Real Results.
             </h2>
 
             <p
@@ -39,7 +39,7 @@ export default function BrandIntro() {
                 marginBottom: '1.25rem'
               }}
             >
-              In a market dominated by fragile templates loaded with 40 third-party plugins that break on the next update, WebCraft represents a return to fundamental excellence.
+              Most websites today are slow, loaded with clunky templates, and hard to update. We take a different approach: building clean, lightweight websites that look great, load in under a second, and represent your business with authority.
             </p>
 
             <p
@@ -50,7 +50,7 @@ export default function BrandIntro() {
                 marginBottom: '1.5rem'
               }}
             >
-              We approach every website like bespoke architecture: establishing rock-solid foundations, drafting intentional typography, engineering custom code line by line, and optimizing every millisecond for Google search authority.
+              Whether you run a clinic, an e-commerce shop, a salon, or a local trade company, we combine thoughtful design, responsive React code, and Google SEO foundations to help you turn visitors into clients.
             </p>
 
             <div
@@ -73,7 +73,7 @@ export default function BrandIntro() {
                   margin: 0
                 }}
               >
-                “When you partner with WebCraft, we treat your business as our own territory to protect and grow.”
+                “We focus on what actually moves the needle: clean design, fast performance, and more inquiries for your business.”
               </p>
             </div>
           </div>
@@ -91,10 +91,10 @@ export default function BrandIntro() {
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
                 <span style={{ color: '#B95E3C', fontFamily: "'JetBrains Mono', monospace", fontWeight: 700, fontSize: '0.85rem' }}>01 /</span>
-                <h3 style={{ fontSize: '1.35rem', color: '#253B32', margin: 0 }}>Heritage Standards</h3>
+                <h3 style={{ fontSize: '1.35rem', color: '#253B32', margin: 0 }}>Thoughtful Design</h3>
               </div>
               <p style={{ fontSize: '0.9rem', color: '#59574D', margin: 0, lineHeight: 1.6 }}>
-                Every element has intentional hierarchy. We employ editorial typography, controlled whitespace, and custom vectors so your business commands unshakeable respect.
+                Clear visual hierarchy, readable typography, and balanced layout that makes your brand look established, trustworthy, and modern.
               </p>
             </div>
 
@@ -108,10 +108,10 @@ export default function BrandIntro() {
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
                 <span style={{ color: '#B95E3C', fontFamily: "'JetBrains Mono', monospace", fontWeight: 700, fontSize: '0.85rem' }}>02 /</span>
-                <h3 style={{ fontSize: '1.35rem', color: '#253B32', margin: 0 }}>Clean Modern Engineering</h3>
+                <h3 style={{ fontSize: '1.35rem', color: '#253B32', margin: 0 }}>Fast Performance</h3>
               </div>
               <p style={{ fontSize: '0.9rem', color: '#59574D', margin: 0, lineHeight: 1.6 }}>
-                Pure React and semantic markup with zero bloat. Websites that load in under 800 milliseconds and achieve 95+ Core Web Vitals on real mobile devices.
+                Built with clean React and modern web standards. Fast load times under 1 second, zero bloat, and smooth performance on every device.
               </p>
             </div>
 
@@ -125,10 +125,10 @@ export default function BrandIntro() {
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
                 <span style={{ color: '#B95E3C', fontFamily: "'JetBrains Mono', monospace", fontWeight: 700, fontSize: '0.85rem' }}>03 /</span>
-                <h3 style={{ fontSize: '1.35rem', color: '#253B32', margin: 0 }}>Commercial Alignment</h3>
+                <h3 style={{ fontSize: '1.35rem', color: '#253B32', margin: 0 }}>Built to Convert</h3>
               </div>
               <p style={{ fontSize: '0.9rem', color: '#59574D', margin: 0, lineHeight: 1.6 }}>
-                We don't build digital art for vanity; we build commercial assets designed to convert casual visitors into high-paying inquiries and repeat customers.
+                Designed around your business goals — simple contact forms, 1-tap call buttons, appointment scheduling, and clear calls-to-action.
               </p>
             </div>
 

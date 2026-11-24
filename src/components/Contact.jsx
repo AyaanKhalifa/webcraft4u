@@ -198,11 +198,11 @@ Delivered directly to WebCraft Founders at webcraft.4iu@gmail.com`;
         {/* Section Header */}
         <div className="editorial-header">
           <div className="editorial-tag terracotta">
-            <span>Free Project Brief Form</span>
+            <span>Project Brief</span>
           </div>
           <h2>Tell Us About Your Project</h2>
           <p style={{ color: '#59574D', fontSize: '1.05rem', lineHeight: 1.6 }}>
-            Fill out this brief to commission your bespoke web architecture. Every submission is routed 100% free of charge directly to our founders at <strong>webcraft.4iu@gmail.com</strong>.
+            Fill out the brief below to tell us about your project. Every submission is sent directly to our founding team at <strong>webcraft.4iu@gmail.com</strong>.
           </p>
         </div>
 
@@ -213,10 +213,10 @@ Delivered directly to WebCraft Founders at webcraft.4iu@gmail.com`;
             {/* Direct Channel Box */}
             <div className="direct-channel-card">
               <h3 style={{ color: '#FBF8F2', fontSize: 'clamp(1.35rem, 3vw, 1.65rem)', marginBottom: '0.75rem', lineHeight: 1.25 }}>
-                Direct Founder Inbox
+                Direct Communication
               </h3>
               <p style={{ fontSize: '0.9rem', color: 'rgba(240,230,210,0.8)', lineHeight: 1.6, marginBottom: '1.75rem' }}>
-                Zero middle-men. When you submit your project brief, it goes straight to the senior engineers building your digital platform.
+                No middlemen or slow support tickets. Your message goes straight to the developers building your website.
               </p>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>

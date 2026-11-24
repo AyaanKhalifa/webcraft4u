@@ -38,7 +38,7 @@ export default function Footer({ onOpenPrivacy, onOpenTerms, onOpenInstall, onRe
               Old-school craftsmanship. <br />New-age possibilities.
             </p>
             <p style={{ fontSize: '0.85rem', color: 'rgba(240,230,210,0.7)', lineHeight: 1.6, maxWidth: '320px' }}>
-              Crafting digital experiences that grow your business through bespoke design, responsive code, and search dominance.
+              Modern web design and custom engineering for local businesses, clinics, retail shops, and growing brands.
             </p>
 
             <div style={{ display: 'flex', gap: '0.75rem', marginTop: '1.25rem' }}>

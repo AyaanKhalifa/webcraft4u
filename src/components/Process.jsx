@@ -5,32 +5,32 @@ export default function Process() {
     {
       num: '01',
       title: 'Discover',
-      tagline: 'Unearthing Commercial DNA',
-      desc: 'We dissect your competitive landscape, ideal customer personas, conversion bottlenecks, and primary business goals to establish a clear strategy.'
+      tagline: 'Understanding Your Goals',
+      desc: 'We learn about your business, target customers, and primary goals to outline a clear and effective website strategy.'
     },
     {
       num: '02',
       title: 'Plan',
-      tagline: 'Architectural Blueprint',
-      desc: 'We map site topology, technical SEO schema hierarchy, conversion paths, and user flow wireframes before drawing a single visual asset.'
+      tagline: 'Structure & Wireframes',
+      desc: 'We map out site navigation, key call-to-actions, and technical SEO foundations before designing visual assets.'
     },
     {
       num: '03',
       title: 'Design',
-      tagline: 'Bespoke Visual Expression',
-      desc: 'We craft high-fidelity art direction, distinctive editorial typography, custom vector graphics, and responsive layouts tailored exclusively to your brand.'
+      tagline: 'UI & Visual Design',
+      desc: 'We design custom layouts with clean typography, tailored color palettes, and full mobile-first responsiveness.'
     },
     {
       num: '04',
       title: 'Develop',
-      tagline: 'Rigorous Engineering',
-      desc: 'Our engineers write clean, semantic HTML5, modern React, and performant CSS. We integrate your CMS, payment rails, and speed optimizations.'
+      tagline: 'Clean Code & Features',
+      desc: 'We write modern React code and performant CSS, connect your forms and booking tools, and optimize loading speeds.'
     },
     {
       num: '05',
       title: 'Launch',
-      tagline: 'Flawless Deployment',
-      desc: 'We execute 50-point QA audits across all device widths from 160px smartwatches to 8K monitors, deploy zero-downtime hosting, and safeguard rankings.'
+      tagline: 'Testing & Go-Live',
+      desc: 'We test across phones, tablets, and desktop screens, configure SSL and search tools, and launch smoothly.'
     }
   ];
 
@@ -40,11 +40,11 @@ export default function Process() {
         
         <div className="editorial-header">
           <div className="editorial-tag terracotta">
-            <span>Workflow & Cadence</span>
+            <span>Our Workflow</span>
           </div>
-          <h2>Our 5-Stage Creative Process</h2>
+          <h2>Simple 5-Step Process</h2>
           <p style={{ color: '#59574D', fontSize: '1.05rem', lineHeight: 1.6 }}>
-            A disciplined, transparent journey designed to eliminate guesswork and guarantee punctual, world-class delivery.
+            From initial idea to live launch, we keep the process clear, fast, and transparent.
           </p>
         </div>
 

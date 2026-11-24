@@ -6,32 +6,32 @@ export default function WhyWebCraft() {
     {
       icon: Palette,
       title: 'Custom Design',
-      desc: 'No stock templates or borrowed layouts. Every interface is designed from a blank canvas to mirror your brand positioning and commercial objectives.'
+      desc: 'No generic templates. Every website is custom-crafted to fit your brand identity, services, and target customers.'
     },
     {
       icon: Smartphone,
-      title: 'Responsive Development',
-      desc: 'Tested fluid layouts from 160px smartwatches up to 8K presentation monitors. Fluid clamp() scales, container queries, and zero clipped elements.'
+      title: 'Mobile-First',
+      desc: 'Over 70% of web traffic is on mobile. We ensure your website looks sharp and works smoothly on every screen size.'
     },
     {
       icon: Zap,
-      title: 'Performance-Focused',
-      desc: 'Engineered for sub-second page loads. We compress assets, eliminate bloat, minimize third-party scripts, and target pristine Core Web Vitals.'
+      title: 'Fast Speed',
+      desc: 'Under 1-second load times. Faster websites keep visitors engaged, reduce bounce rates, and rank higher on Google.'
     },
     {
       icon: Search,
-      title: 'SEO Foundations',
-      desc: 'Technical search hygiene from day one: Schema.org structured data, semantic HTML5, canonical URLs, XML sitemaps, and robots.txt configuration.'
+      title: 'SEO Ready',
+      desc: 'Built-in technical SEO with semantic HTML5, Schema.org tags, clean metadata, and Google search readiness from day one.'
     },
     {
       icon: MessageSquare,
-      title: 'Clear Communication',
-      desc: 'Direct collaboration with senior engineers and designers. Regular video milestone check-ins, transparent timelines, and prompt replies within 24 hours.'
+      title: 'Direct Contact',
+      desc: 'Direct communication with your developer. Transparent updates, quick replies within 24 hours, and clear milestones.'
     },
     {
       icon: Clock,
-      title: 'Reliable Delivery',
-      desc: 'Realistic, disciplined project scopes. We commit to agreed launch dates and provide continuous post-launch warranty support.'
+      title: 'On-Time Delivery',
+      desc: 'We stick to agreed deadlines and project scopes, with post-launch support and guidance included.'
     }
   ];
 
@@ -48,11 +48,11 @@ export default function WhyWebCraft() {
         
         <div className="editorial-header">
           <div className="editorial-tag gold">
-            <span>Genuine Principles</span>
+            <span>Why Choose Us</span>
           </div>
-          <h2>Why Ambitious Businesses Partner With WebCraft</h2>
+          <h2>Why Businesses Choose WebCraft</h2>
           <p style={{ color: '#59574D', fontSize: '1.05rem', lineHeight: 1.6 }}>
-            We don't offer unrealistic vanity promises. We offer disciplined digital craftsmanship and measurable engineering rigor.
+            No shortcuts, no slow templates. We build custom websites that help your business stand out and succeed online.
           </p>
         </div>
 

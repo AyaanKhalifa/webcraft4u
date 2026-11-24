@@ -10,13 +10,12 @@ export default function Hero({ onStartProject, onExploreWork, onOpenInstall }) {
   const [isDeleting, setIsDeleting] = useState(false);
 
   const phrases = [
-    'Bespoke Web Architecture for Growth 🏛️',
-    'Sub-Second Loading & 95+ Core Web Vitals ⚡',
-    'Medical & Dental Clinic Intake Hubs 🩺',
-    'Retail Stores with Frictionless Checkout 🛒',
-    'Barbershop & Salon 24/7 Booking ✂️',
-    'High-Converting Local Trade Engines 🛠️',
-    'Old-School Craftsmanship. Modern Code. 🐺'
+    'Fast, Modern Websites for Real Businesses ⚡',
+    'Medical & Dental Clinic Booking Systems 🩺',
+    'Online Stores with Fast Checkout 🛒',
+    'Barbershop & Salon Appointments ✂️',
+    'Lead-Generating Contractor Websites 🛠️',
+    'Clean React Code & Built-In SEO 🚀'
   ];
 
   useEffect(() => {
@@ -56,7 +55,7 @@ export default function Hero({ onStartProject, onExploreWork, onOpenInstall }) {
           {/* Left Column: Text & Editorial Hierarchy */}
           <div>
             <div className="editorial-tag gold">
-              <span>Bespoke Digital Studio</span>
+              <span>Digital Studio</span>
               <span>•</span>
               <button
                 type="button"
@@ -80,8 +79,8 @@ export default function Hero({ onStartProject, onExploreWork, onOpenInstall }) {
             </div>
 
             <h1 className="hero-headline">
-              Old-School Mastery. <br />
-              <em>Relentless Code.</em> <br />
+              Custom Web Design. <br />
+              <em>Modern Engineering.</em> <br />
               Websites That Grow Your Business.
             </h1>
 
@@ -104,7 +103,7 @@ export default function Hero({ onStartProject, onExploreWork, onOpenInstall }) {
             </div>
 
             <p className="hero-description">
-              We reject bloated templates and fragile shortcuts. WebCraft pairs timeless design discipline with high-velocity web architecture to forge digital flagships for ambitious businesses.
+              We design and build fast, custom websites tailored for modern businesses. No slow templates or unnecessary plugins — just clean code, strong Google SEO, and responsive design that turns visitors into paying customers.
             </p>
 
             <div className="hero-cta-group">
@@ -131,19 +130,19 @@ export default function Hero({ onStartProject, onExploreWork, onOpenInstall }) {
             <div className="hero-trust-strip">
               <div className="trust-item">
                 <strong>100%</strong>
-                <span>Bespoke Architecture</span>
+                <span>Custom Built</span>
               </div>
               <div className="trust-item">
-                <strong>&lt; 0.8s</strong>
-                <span>Speed Target</span>
+                <strong>&lt; 1s</strong>
+                <span>Fast Loading</span>
               </div>
               <div className="trust-item">
-                <strong>WCAG AA</strong>
-                <span>Accessibility Rigor</span>
+                <strong>Mobile-First</strong>
+                <span>All Screens</span>
               </div>
               <div className="trust-item">
                 <strong>24h</strong>
-                <span>Direct Turnaround</span>
+                <span>Quick Response</span>
               </div>
             </div>
           </div>

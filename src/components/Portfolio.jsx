@@ -126,11 +126,11 @@ export default function Portfolio({ onOpenCaseStudy, onSelectForMyBusiness }) {
         {/* Section Header */}
         <div className="editorial-header">
           <div className="editorial-tag gold" style={{ backgroundColor: 'rgba(185,154,91,0.18)', color: '#F0E6D2' }}>
-            <span>Real Industry Solutions</span>
+            <span>Tailored Industry Solutions</span>
           </div>
           <h2>Businesses We Build For</h2>
           <p style={{ color: 'rgba(240,230,210,0.85)', fontSize: '1.05rem', lineHeight: 1.6 }}>
-            Instead of presenting fake client work, explore how WebCraft delivers tailored web architectures for clinics, shops, barbershops, software companies, and local trade services.
+            Explore custom websites and digital solutions built for clinics, shops, salons, startups, and local trade contractors.
           </p>
         </div>
 

@@ -77,7 +77,7 @@ export default function Preloader({ onComplete }) {
         </div>
         <div className="housing-drum-plate">
           <span className="housing-drum-dot" />
-          <span>WEBCRAFT WORKSHOP ROLL-SYSTEM • BESPOKE CODE & DESIGN</span>
+          <span>WEBCRAFT DIGITAL STUDIO • FAST & CUSTOM WEB ENGINEERING</span>
           <span className="housing-drum-dot" />
         </div>
       </div>
@@ -126,15 +126,15 @@ export default function Preloader({ onComplete }) {
 
               <div className="shutter-badge-info">
                 <span className="shutter-badge-tagline">
-                  OLD-SCHOOL CRAFTSMANSHIP • NEW-AGE POSSIBILITIES
+                  MODERN DESIGN • CLEAN CODE • REAL RESULTS
                 </span>
                 
                 <div className="shutter-status-pill">
                   <span className="status-blinker" />
                   <span className="status-text">
                     {shutterState === 'closed'
-                      ? `DISENGAGING LOCKS... ${progress}%`
-                      : 'WORKSHOP OPEN • WELCOME'}
+                      ? `PREPARING WORKSPACE... ${progress}%`
+                      : 'READY • WELCOME TO WEBCRAFT'}
                   </span>
                 </div>
               </div>

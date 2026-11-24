@@ -3,15 +3,15 @@ import { Code2, Zap, ShieldCheck, Search, Layout, Smartphone, Database, CheckCir
 
 export default function MarqueeTicker() {
   const marqueeItems = [
-    { label: 'React.js & Pure Frontend', icon: Code2 },
-    { label: 'Sub-Second Speed (< 800ms)', icon: Zap },
-    { label: 'Google Local & Schema.org SEO', icon: Search },
-    { label: 'Mobile-First Responsive Architecture', icon: Smartphone },
-    { label: '95+ Core Web Vitals Guaranteed', icon: CheckCircle2 },
-    { label: 'Clinic Patient Intake & Booking Hubs', icon: Layout },
-    { label: 'Stripe & Apple Pay Checkout', icon: ShieldCheck },
-    { label: 'Bespoke Code • Zero Bloatware', icon: Cpu },
-    { label: 'Heritage Craft × Modern Engineering', icon: Sparkles }
+    { label: 'React.js & Clean Code', icon: Code2 },
+    { label: 'Fast Load Speed (< 1s)', icon: Zap },
+    { label: 'Google Local & Schema SEO', icon: Search },
+    { label: 'Mobile-First Responsive Design', icon: Smartphone },
+    { label: '95+ Google Speed Score', icon: CheckCircle2 },
+    { label: 'Online Booking & Forms', icon: Layout },
+    { label: 'Stripe & Apple Pay Integration', icon: ShieldCheck },
+    { label: 'Zero Template Bloat', icon: Cpu },
+    { label: 'Custom Modern Web Design', icon: Sparkles }
   ];
 
   return (
